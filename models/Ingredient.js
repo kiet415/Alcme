@@ -3,34 +3,36 @@ const Schema = mongoose.Schema;
 
 const IngredientSchmema = new Schema({
   id: {
-    type: integer
+    type: Integer
   },
   name: {
-    type: string
+    type: String
   },
   aisle: {
-    type: string
+    type: String
   },
   imageUrl: {
-    type: string
+    type: String
   },
+
   nutrition: {
     nutrients: [ 
       {
         name: {
-        type: string
+        type: String
         },
         amount: {
-          type: integer
+          type: Integer
         },
         unit: {
-          type: string
+          type: String
+
         }
       }
     ]
   },
     category: {
-      type: string
+      type: String
   }
 })
 
