@@ -1,15 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-  // id => integer
-  // original == name => string
-  // aisle =>string
-  //image url => string
-  // nutrition obj => {
-  //  nutrients => []
-  // }
-
-
 const IngredientSchmema = new Schema({
   id: {
     type: Integer
@@ -23,12 +14,7 @@ const IngredientSchmema = new Schema({
   imageUrl: {
     type: String
   },
-<<<<<<< Updated upstream
-  // nutrition: {
-  //   type: Schema.Types.ObjectID,
-  //   ref: 'nutrients'
-  // }
-=======
+
   nutrition: {
     nutrients: [ 
       {
@@ -40,6 +26,7 @@ const IngredientSchmema = new Schema({
         },
         unit: {
           type: String
+
         }
       }
     ]
@@ -47,7 +34,6 @@ const IngredientSchmema = new Schema({
     category: {
       type: String
   }
->>>>>>> Stashed changes
 })
 
 module.exports = Ingredient = mongoose.model('ingredient',IngredientSchmema)
