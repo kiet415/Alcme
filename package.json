@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "alcme.js",
-"scripts": {
-  "server:debug": "nodemon --inspect alcme.js",
-  "start": "node alcme.js",
-  "server": "nodemon alcme.js"
-},
+  "scripts": {
+    "server:debug": "nodemon --inspect alcme.js",
+    "start": "node alcme.js",
+    "server": "nodemon alcme.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kiet415/Alcme.git"
