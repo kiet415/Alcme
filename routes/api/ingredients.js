@@ -4,7 +4,7 @@ const mogoose = require('mongoose');
 const passport = require('passport');
 
 const Ingredient = require('../../models/Ingredient')
-const validText = require('./valid-text');
+// const validText = require('./valid-text');
 
 router.get('/', (req, res) => {
   Ingredient.all();

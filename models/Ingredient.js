@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const IngredientSchmema = new Schema({
   id: {
-    type: Integer
+    type: Number 
   },
   name: {
     type: String
@@ -22,7 +22,7 @@ const IngredientSchmema = new Schema({
         type: String
         },
         amount: {
-          type: Integer
+          type: Number
         },
         unit: {
           type: String
