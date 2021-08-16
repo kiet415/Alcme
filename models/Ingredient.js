@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoos.Schema;
+const Schema = mongoose.Schema;
 
-const IngredientSchmema = new Schema({
   // id => integer
   // original == name => string
   // aisle =>string
@@ -10,4 +9,24 @@ const IngredientSchmema = new Schema({
   //  nutrients => []
   // }
 
+
+const IngredientSchmema = new Schema({
+  id: {
+    type: integer
+  },
+  name: {
+    type: string
+  },
+  aisle: {
+    type: string
+  },
+  imageUrl: {
+    type: string
+  },
+  // nutrition: {
+  //   type: Schema.Types.ObjectID,
+  //   ref: 'nutrients'
+  // }
 })
+
+module.exports = Ingredient = mongoose.model('ingredient',IngredientSchmema)
