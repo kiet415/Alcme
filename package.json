@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "alcme.js",
-"scripts": {
-  "server:debug": "nodemon --inspect alcme.js",
-  "start": "node alcme.js",
-  "server": "nodemon alcme.js"
-},
+  "scripts": {
+    "server:debug": "nodemon --inspect alcme.js",
+    "start": "node alcme.js",
+    "server": "nodemon alcme.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kiet415/Alcme.git"
@@ -26,6 +26,7 @@
     "mongoose": "^5.13.7",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "spoonacular_api": "^1.0.0",
     "validator": "^13.6.0"
   },
   "devDependencies": {
