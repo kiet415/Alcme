@@ -12,21 +12,42 @@ const Schema = mongoose.Schema;
 
 const IngredientSchmema = new Schema({
   id: {
-    type: integer
+    type: Integer
   },
   name: {
-    type: string
+    type: String
   },
   aisle: {
-    type: string
+    type: String
   },
   imageUrl: {
-    type: string
+    type: String
   },
+<<<<<<< Updated upstream
   // nutrition: {
   //   type: Schema.Types.ObjectID,
   //   ref: 'nutrients'
   // }
+=======
+  nutrition: {
+    nutrients: [ 
+      {
+        name: {
+        type: String
+        },
+        amount: {
+          type: Integer
+        },
+        unit: {
+          type: String
+        }
+      }
+    ]
+  },
+    category: {
+      type: String
+  }
+>>>>>>> Stashed changes
 })
 
 module.exports = Ingredient = mongoose.model('ingredient',IngredientSchmema)
