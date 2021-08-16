@@ -1,15 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-  // id => integer
-  // original == name => string
-  // aisle =>string
-  //image url => string
-  // nutrition obj => {
-  //  nutrients => []
-  // }
-
-
 const IngredientSchmema = new Schema({
   id: {
     type: integer
@@ -23,10 +14,21 @@ const IngredientSchmema = new Schema({
   imageUrl: {
     type: string
   },
-  // nutrition: {
-  //   type: Schema.Types.ObjectID,
-  //   ref: 'nutrients'
-  // }
+  nutrition: {
+    nutrients: [ 
+      {
+        name: {
+        type: string
+        },
+        amount: {
+          type: integer
+        },
+        unit: {
+          type: string
+        }
+      }
+    ]
+  }
 })
 
 module.exports = Ingredient = mongoose.model('ingredient',IngredientSchmema)
