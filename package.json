@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "alcme.js",
-"scripts": {
-  "server:debug": "nodemon --inspect alcme.js",
-  "start": "node alcme.js",
-  "server": "nodemon alcme.js"
-},
+  "scripts": {
+    "server:debug": "nodemon --inspect alcme.js",
+    "start": "node alcme.js",
+    "server": "nodemon alcme.js",
+    "frontend-install": "npm install --prefix frontend",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\""
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kiet415/Alcme.git"
@@ -19,13 +22,20 @@
   },
   "homepage": "https://github.com/kiet415/Alcme#readme",
   "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "concurrently": "^6.2.1",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.7",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "redux": "^4.1.1",
+    "redux-logger": "^3.0.6",
     "validator": "^13.6.0"
   },
   "devDependencies": {
