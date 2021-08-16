@@ -28,6 +28,9 @@ const IngredientSchmema = new Schema({
         }
       }
     ]
+  },
+    category: {
+      type: string
   }
 })
 
