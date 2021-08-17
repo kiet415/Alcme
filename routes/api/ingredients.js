@@ -11,6 +11,14 @@ router.get('/', (req, res) => {
   Ingredient.find({}).then(list => res.json(list));
 })
 
+router.get('/:id', (req, res) => {
+  Ingredient.findById(req.params.id)
+    .then(item => res.json(item))
+    .catch(err => 
+      res.status(401).json({ noIngredientFound: "No ingredient found with that ID"})
+      );
+});
+
 router.post('/create', (req, res) => {
   let newIngredient = new Ingredient({
     name: req.body.name,
