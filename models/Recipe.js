@@ -3,23 +3,26 @@ const Schema = mongoose.Schema;
 
 const RecipeSchema = new Schema ({
     id: {
-        type: integer
-    }, 
+        type: Number
+    },
     title: {
-        type: string
-    }, 
+        type: String
+    },
     image: {
-        type: string
+        type: String
     },
-    servings: {
-        type: integer
+    usedIngredientCount: {
+        type: Number
     },
-    ingredients: {
-        type: [string]
+    usedIngredients: {
+        type: Array
     },
     instructions: {
-        type: string
+        type: String
     },
+    servings: {
+        type: Number
+    }
 })
 
 module.exports = Recipe = mongoose.model('recipe', RecipeSchema);
