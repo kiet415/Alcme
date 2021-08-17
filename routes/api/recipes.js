@@ -10,9 +10,9 @@ const Recipe = require('../../models/Recipe');
 router.get('/', (req, res) => {
   Recipe.find({}).then(recipes => res.json(recipes));
 })
-router.post('/create', (req, res) => {
-  req.json
-})
+// router.post('/create', (req, res) => {
+//   req.json
+// })
 // router.post '/' create recipe
   
 // router.get '/' + wildcard #=> find specific
