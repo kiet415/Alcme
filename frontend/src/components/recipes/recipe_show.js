@@ -4,18 +4,18 @@ class RecipeShow extends React.Component {
     constructor(props) {
         super(props);
     }
+    componentDidMount() {
+        this.props.fetchRecipe();
+    }
     render() {
-    return (
-        <div>
-
+        console.log(this.props)
+        return (
             <div>
-                <h1>Recipe Title here</h1>
-                <div>List of Ingredients</div>
-                <div>Directions</div>
+                {this.props.recipe.title}
+                <img src={this.props.recipe.image}/>
             </div>
-        </div>
-    );
-  }
+        );
+    }
 }
 
 export default RecipeShow;

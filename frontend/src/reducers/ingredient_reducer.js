@@ -8,7 +8,7 @@ const IngredientsReducer = (state = {}, action) => {
             newState.all = action.ingredients.data;
             return newState;
         case RECEIVE_INGREDIENT:
-            newState.all = action.ingredients.data;
+            newState.all = action.ingredient.data;
             return newState;
         default:
             return state;

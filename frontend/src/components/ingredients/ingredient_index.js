@@ -17,7 +17,7 @@ class IngredientIndex extends React.Component {
       <div>
         <h1>Alcme</h1>
         <div className="index-home"> 
-          <Link to="/recipe/hi">Recipe show page</Link>
+          <Link to="/recipes">Recipe index page</Link>
            <br/>
           <Link to="/recipe/create">Create Recipe</Link>
 

@@ -6,9 +6,10 @@ import { Route } from 'react-router';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import IngredientShowContainer from './ingredients/ingredient_show_container';
-import RecipeShow from './recipes/recipe_show';
+import RecipeShowContainer from './recipes/recipe_show_container';
 import CreateRecipe from './recipes/recipe_create'
-import IngredientIndexContainer from './ingredients/ingredient_index_container'
+import IngredientIndexContainer from './ingredients/ingredient_index_container';
+import RecipeIndexContainer from './recipes/recipe_index_container'
 const App = () => (
   <div className="root-home">
     <NavBarContainer />
@@ -17,7 +18,8 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path="/" component={IngredientIndexContainer} />
         <Route exact path="/ingredient/:id" component={IngredientShowContainer}/>
-        <Route exact path="/recipe/hi" component={RecipeShow}/>
+        <Route exact path="/recipes" component={RecipeIndexContainer}/>
+        <Route exact path="/recipe/:id" component={RecipeShowContainer}/>
         <Route exact path="/recipe/create" component={CreateRecipe}/>
     </Switch>
   </div>
