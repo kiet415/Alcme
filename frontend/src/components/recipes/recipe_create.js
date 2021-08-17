@@ -48,12 +48,16 @@ class RecipeShow extends React.Component {
                                 placeholder="Instructions here"
                             /> 
 
-                            <input className="form-btn" type="submit" value="Upload Recipe"/>
+                            <input className="form-btn" type="submit" value="Add an instruction/ingredient"/>
                         </form>
                     </div>
-                    {this.state.userIngredients}
+                    {this.state.userIngredients.map(ingredient => (
+                        <div>{ingredient}</div>
+                    ))}
                     <br/>
-                    {this.state.userInstructions}
+                    {this.state.userInstructions.map(instruction => (
+                        <div>{instruction}</div>
+                    ))}
                 </div>
             </div>
         );
