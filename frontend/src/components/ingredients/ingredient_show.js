@@ -1,11 +1,19 @@
 import React from 'react';
 import { Chart } from "react-google-charts";
 class IngredientIndex extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
+  componentDidMount() {
+    this.props.fetchIngredient()
+  }
   render() {
+    console.log(this.props)
+    if(!this.props.ingredient) return null;
     return (
       <div className="ingredient-show-page">
-        <h1 className="ingredient-title">Ingredient title here</h1>
+        <h1 className="ingredient-title">{this.props.ingredient.name}</h1>
         <div className="ingredient-show-container">
             
             <ul className="ingredient-nutrition">
