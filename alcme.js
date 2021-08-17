@@ -8,6 +8,7 @@ const users = require('./routes/api/users')
 const ingredients = require('./routes/api/ingredients');
 const recipes = require("./routes/api/recipes");
 
+const ingredients = require('./routes/api/ingredients')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // check deprecation status of bodyParser
@@ -28,5 +29,4 @@ app.use('/api/recipes', recipes)
 
 const port = process.env.PORT || 5000
 app.listen(port, () => console.log(`Server is running on port ${port}`));
-
 
