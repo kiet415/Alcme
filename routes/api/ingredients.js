@@ -13,18 +13,14 @@ router.get('/', (req, res) => {
 
 router.post('/create', (req, res) => {
   // import and define validations
-  const newIngredient = new Ingredient({
+  let newIngredient = new Ingredient({
     name: req.body.name,
     aisle: req.body.aisle,
     imageUrl: req.body.imageUrl,
     nutrition: req.body.nutrition,
     category: req.body.category
   });
-  newIngredient.save()
-    .then(newIngredient => {
-    res.json({
-      msg: "Success",
-      newIngredient
-    }).catch(err => console.log(err))});
-})
+  newIngredient.save().then(ingredient => {
+    res.json(ingredient)
+})})
 module.exports = router;
