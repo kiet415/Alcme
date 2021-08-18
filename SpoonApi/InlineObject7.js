@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+const ApiClient = require('./ApiClient');
 
 /**
  * The InlineObject7 model module.
@@ -90,5 +90,5 @@ InlineObject7.prototype['includeNutrition'] = undefined;
 
 
 
-export default InlineObject7;
+exports.InlineObject7 = InlineObject7;
 

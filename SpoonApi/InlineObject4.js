@@ -10,8 +10,7 @@
  * Do not edit the class manually.
  *
  */
-
-import ApiClient from '../ApiClient';
+const ApiClient = require('./ApiClient');
 
 /**
  * The InlineObject4 model module.
@@ -183,5 +182,5 @@ InlineObject4.prototype['source'] = undefined;
 
 
 
-export default InlineObject4;
+exports.InlineObject4 = InlineObject4;
 

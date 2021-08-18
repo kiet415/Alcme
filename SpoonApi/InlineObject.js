@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+const ApiClient = require('./ApiClient')
 
 /**
  * The InlineObject model module.
@@ -70,5 +70,5 @@ InlineObject.prototype['ingredientList'] = undefined;
 
 
 
-export default InlineObject;
+exports.InlineObject = InlineObject;
 

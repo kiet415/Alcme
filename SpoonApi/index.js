@@ -30,7 +30,8 @@ const InlineObject6 = require('./InlineObject6')
 const InlineObject7 = require('./InlineObject7')
 const InlineObject8 = require('./InlineObject8')
 const InlineObject9 = require('./InlineObject9')
-const DefaultApi = require()
+const DefaultApi = require('./DefaultApi.js'
+)
 
 
 /**
@@ -64,7 +65,7 @@ const DefaultApi = require()
 * @module com.spoonacular.client/index
 * @version 1.0
 */
-export {
+module.export = {
     /**
      * The ApiClient constructor.
      * @property {module:com.spoonacular.client/ApiClient}

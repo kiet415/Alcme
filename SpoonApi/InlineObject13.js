@@ -10,8 +10,7 @@
  * Do not edit the class manually.
  *
  */
-
-import ApiClient from '../ApiClient';
+const ApiClient = require('./ApiClient');
 
 /**
  * The InlineObject13 model module.
@@ -103,5 +102,5 @@ InlineObject13.prototype['hash'] = undefined;
 
 
 
-export default InlineObject13;
+exports.InlineObject13 = InlineObject13;
 

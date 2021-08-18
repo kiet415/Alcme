@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+const ApiClient = require('./ApiClient');
 
 /**
  * The InlineObject9 model module.
@@ -68,5 +68,5 @@ InlineObject9.prototype['locale'] = undefined;
 
 
 
-export default InlineObject9;
+exports.InlineObject9 = InlineObject9;
 

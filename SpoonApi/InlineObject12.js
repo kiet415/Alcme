@@ -10,9 +10,7 @@
  * Do not edit the class manually.
  *
  */
-
-import ApiClient from '../ApiClient';
-
+const ApiClient = require('./ApiClient');
 /**
  * The InlineObject12 model module.
  * @module com.spoonacular.client/com.spoonacular.client.model/InlineObject12
@@ -92,5 +90,5 @@ InlineObject12.prototype['hash'] = undefined;
 
 
 
-export default InlineObject12;
+exports.InlineObject12 = InlineObject12;
 

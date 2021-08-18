@@ -10,9 +10,7 @@
  * Do not edit the class manually.
  *
  */
-
-import ApiClient from '../ApiClient';
-
+const ApiClient = require('./ApiClient');
 /**
  * The InlineObject6 model module.
  * @module com.spoonacular.client/com.spoonacular.client.model/InlineObject6
@@ -81,5 +79,5 @@ InlineObject6.prototype['ingredientList'] = undefined;
 
 
 
-export default InlineObject6;
+exports.InlineObject6 = InlineObject6;
 

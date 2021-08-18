@@ -12,8 +12,8 @@
  */
 
 
-import superagent from "superagent";
-import querystring from "querystring";
+const superagent = require("superagent");
+const querystring = require("querystring");
 
 /**
 * @module com.spoonacular.client/ApiClient
@@ -650,4 +650,4 @@ ApiClient.CollectionFormatEnum = {
 */
 ApiClient.instance = new ApiClient();
 
-export default ApiClient
+exports.ApiClient = ApiClient

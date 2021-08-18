@@ -10,8 +10,7 @@
  * Do not edit the class manually.
  *
  */
-
-import ApiClient from '../ApiClient';
+const ApiClient = require('./ApiClient');
 
 /**
  * The InlineObject5 model module.
@@ -70,5 +69,5 @@ InlineObject5.prototype['instructions'] = undefined;
 
 
 
-export default InlineObject5;
+exports.InlineObject5 = InlineObject5;
 

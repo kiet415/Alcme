@@ -11,7 +11,7 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+const ApiClient = require('./ApiClient')
 
 /**
  * The InlineObject1 model module.
@@ -99,5 +99,5 @@ InlineObject1.prototype['showBacklink'] = undefined;
 
 
 
-export default InlineObject1;
+exports.InlineObject1 = InlineObject1;
 

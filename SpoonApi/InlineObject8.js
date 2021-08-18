@@ -10,8 +10,7 @@
  * Do not edit the class manually.
  *
  */
-
-import ApiClient from '../ApiClient';
+const ApiClient = require('./ApiClient');
 
 /**
  * The InlineObject8 model module.
@@ -117,5 +116,5 @@ InlineObject8.prototype['showBacklink'] = undefined;
 
 
 
-export default InlineObject8;
+exports.InlineObject8 = InlineObject8;
 

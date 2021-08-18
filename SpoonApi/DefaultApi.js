@@ -12,31 +12,34 @@
  */
 
 
-import ApiClient from "../ApiClient";
-import InlineObject10 from '../com.spoonacular.client.model/InlineObject10';
-import InlineObject11 from '../com.spoonacular.client.model/InlineObject11';
-import InlineObject12 from '../com.spoonacular.client.model/InlineObject12';
-import InlineObject13 from '../com.spoonacular.client.model/InlineObject13';
-import InlineObject14 from '../com.spoonacular.client.model/InlineObject14';
-import InlineObject15 from '../com.spoonacular.client.model/InlineObject15';
-import InlineObject9 from '../com.spoonacular.client.model/InlineObject9';
+const ApiClient = require('./ApiClient')
+const InlineObject10 = require('./InlineObject10');
+const InlineObject11 = require('./InlineObject11');
+const InlineObject12 = require('./InlineObject12');
+const InlineObject13 = require('./InlineObject13');
+const InlineObject14 = require('./InlineObject14');
+const InlineObject15 = require('./InlineObject15');
+const InlineObject9 = require('./InlineObject9'); 
 
-/**
-* Default service.
-* @module com.spoonacular.client/com.spoonacular/DefaultApi
-* @version 1.0
-*/
-export default class DefaultApi {
+// /**
+// * Default service.
+// * @module com.spoonacular.client/com.spoonacular/DefaultApi
+// * @version 1.0
+// */
 
-    /**
-    * Constructs a new DefaultApi. 
-    * @alias module:com.spoonacular.client/com.spoonacular/DefaultApi
-    * @class
-    * @param {module:com.spoonacular.client/ApiClient} [apiClient] Optional API client implementation to use,
-    * default to {@link module:com.spoonacular.client/ApiClient#instance} if unspecified.
-    */
+class DefaultApi {
+  
+    // /**
+    // * Constructs a new DefaultApi. 
+    // * @alias module:com.spoonacular.client/com.spoonacular/DefaultApi
+    // * @class
+    // * @param {module:com.spoonacular.client/ApiClient} [apiClient] Optional API client implementation to use,
+    // * default to {@link module:com.spoonacular.client/ApiClient#instance} if unspecified.
+    // */
     constructor(apiClient) {
         this.apiClient = apiClient || ApiClient.instance;
+        // const apiKeyScheme = this.apiClient.authentications['apiKeyScheme'];
+        // apiKeyScheme.apiKey = '7feb8ca6835644a58fb03fa022cff140'
     }
 
 
@@ -4304,6 +4307,6 @@ export default class DefaultApi {
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
-
-
 }
+
+module.exports.DefaultApi = DefaultApi

@@ -114,7 +114,7 @@ var hash = 4b5v4398573406; // {String} The private hash for the username.
 var inlineObject11 = new SpoonacularApi.InlineObject11(); // {InlineObject11} 
 var callback = function(error, data, response) {
   if (error) {
-    console.error(error);
+    console.error(error);  
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }

@@ -11,7 +11,8 @@
  *
  */
 
-import ApiClient from '../ApiClient';
+
+const ApiClient = require('./ApiClient')
 
 /**
  * The InlineObject16 model module.
@@ -70,5 +71,5 @@ InlineObject16.prototype['text'] = undefined;
 
 
 
-export default InlineObject16;
+exports.InlineObject16 = InlineObject16;
 
