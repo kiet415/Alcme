@@ -7,6 +7,7 @@ const passport = require('passport');
 const users = require('./routes/api/users')
 const ingredients = require('./routes/api/ingredients');
 const recipes = require("./routes/api/recipes");
+const path = require("path")
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
