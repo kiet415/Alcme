@@ -51,10 +51,10 @@ class IngredientIndex extends React.Component {
             <h1>List of all ingredients</h1>
             <ul className="index-ul">
               {this.props.ingredients[0].map((ingredient, index) => (
+
                 <div className="index-div">
                   <li className="index-ingredient"  onClick={((e) => this.handleClick(e))} key={index}>
                     <div>{ingredient['name']}</div>
-                    
                   </li>
                   <IngredientIndexItem 
                      id={index}

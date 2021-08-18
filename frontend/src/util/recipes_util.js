@@ -1,17 +1,18 @@
 import axios from 'axios';
 
-
+// change to get user recipes from db
 export const getRecipes = () => {
     return axios.get('/api/recipes');
 };
-
+// change to get user recipe from db
 export const getRecipe = id => {
     return axios.get(`/api/recipes/${id}`)
 }
-
+// change to create recipe in db
 export const createRecipe = data => {
     return axios.post(`/api/recipes/create`, data)
 }
+
 
 export const getRecipesByIngredients = (ingredients) => {
     console.log(ingredients)
@@ -28,3 +29,4 @@ export const getRecipesByIngredients = (ingredients) => {
 //         res.send(error);
 //       });
 //   })
+
