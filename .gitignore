@@ -3,3 +3,4 @@
 .DS_store
 
 /config/keys_dev.js
+/config/keys_prod.js

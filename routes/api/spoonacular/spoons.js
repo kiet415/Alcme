@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 
 const api_helper = require('./apiHelper');
-const { spkey } = require('../../../config/keys');
+const { spkey } = require('../../../config/keys_dev');
 const path = 'https://api.spoonacular.com/';
 
 router.get('/recipeAutofill', (req, res) => {
