@@ -4,7 +4,7 @@
   "description": "",
   "main": "alcme.js",
   "engines" : {
-    "node": "10.13.0"
+    "node": "10.14.2"
   },
   "scripts": {
     "server:debug": "nodemon --inspect alcme.js",
