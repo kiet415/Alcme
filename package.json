@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "alcme.js",
+  "engines" : {
+    "node": "10.13.0"
+  },
   "scripts": {
     "server:debug": "nodemon --inspect alcme.js",
     "start": "node alcme.js",
