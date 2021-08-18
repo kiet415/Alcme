@@ -2,28 +2,37 @@ import React from 'react';
 import IngredientIndexItem from './ingredient_index_item';
 import { Link } from 'react-router-dom';
 class IngredientIndex extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    this.props.fetchIngredients();
+  }
 
   render() {
+    if(this.props.ingredients[0] === undefined) return null;
+    // let imgUrl = "https://spoonacular.com/cdn/ingredients_500x500/"
     return (
       <div>
         <h1>Alcme</h1>
         <div className="index-home"> 
-          <Link to="/recipe/hi">Recipe show page</Link>
+          <Link to="/recipes">Recipe index page</Link>
            <br/>
           <Link to="/recipe/create">Create Recipe</Link>
 
           
             <h1>List of all ingredients</h1>
             <ul className="index-ul">
-              <li className="index-ingredient">
-                Ingredient name and img here
-                <IngredientIndexItem />
-              </li>
-
-              <li className="index-ingredient">
-                Ingredient name and img here
-                <IngredientIndexItem />
-              </li>
+              {this.props.ingredients[0].map((ingredient, index) => (
+                <li className="index-ingredient" key={index}>
+                  <div>{ingredient['name']}</div>
+                  <IngredientIndexItem 
+                    id={index}
+                  />
+                </li>
+              ))}
+  
             </ul>
             
             

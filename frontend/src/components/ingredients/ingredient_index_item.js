@@ -11,7 +11,7 @@ class IngredientIndexItem extends React.Component {
 
             <div>
                 {/* <Link className="item-name" to={`/ingredient/${this.props.ingredient.id}`} > */}
-                <Link className="item-name" to={`/ingredient/hi`}>
+                <Link key={this.props.id}className="item-name" to={`/ingredient/${this.props.id}`}>
                     
                     Nutrition Data
                 </Link>
