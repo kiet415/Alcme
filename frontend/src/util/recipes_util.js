@@ -14,8 +14,8 @@ export const createRecipe = data => {
 }
 
 export const getRecipesByIngredients = (ingredients) => {
-    
-    return axios.get(`/api/spoon/findRecipeByIngredients`, {params: {ingredients: ingredients}})
+    console.log(ingredients)
+    return axios.post(`/api/spoon/findRecipeByIngredients`, {params: {ingredients: ingredients}})
 }
 // router.get('/findRecipeByIngredients', (req, res) => {
 //     const ingredients = req['query'].ingredients;

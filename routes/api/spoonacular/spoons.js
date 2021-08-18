@@ -17,12 +17,11 @@ router.get('/recipeAutofill', (req, res) => {
   }); 
 });
 
-router.get('/findRecipeByIngredients', (req, res) => {
-  const ingredients = req['params'];
+router.post('/findRecipeByIngredients', (req, res) => {
+  const ingredients = String(req.body.params.ingredients); 
   console.log(ingredients)
   const findByIngredients = path + '/recipes/findByIngredients?ingredients='
-  + ingredients +'&number=10&limitLicense=false&ignorePantry=false&'+ spkey;
-  console.log(findByIngredients)
+  + ingredients +'&number=10&limitLicense=false&ignorePantry=false&'+ spkey; 
    api_helper.make_API_call(findByIngredients).then(response => {
       res.json(response);
    })
