@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-
+const request = require('request');
+const axios = require('axios')
 const api_helper = require('./apiHelper');
-const { spkey } = require('../../../config/keys');
+const { spkey } = require('../../../config/keys_dev.js');
+const { response } = require('express');
 const path = 'https://api.spoonacular.com/';
 
 router.get('/recipeAutofill', (req, res) => {
@@ -18,6 +20,7 @@ router.get('/recipeAutofill', (req, res) => {
 });
 
 router.get('/findRecipeByIngredients', (req, res) => {
+  // 
   const ingredients = req['query'].ingredients;
   const findByIngredients = path + '/recipes/findByIngredients?ingredients='
   + ingredients +'&number=10&limitLicense=false&ignorePantry=false&'+ spkey;
@@ -43,7 +46,7 @@ router.get('/findIngredients', (req, res) => {
 
 router.get('/ingredientWidget', (req, res) => {
   const id = req['query'].id;
-  const getWidget = path + '/recipes/'+ id + '/ingredientWidget?defaultCss=false';
+  const getWidget = path + '/recipes/'+ id + '/ingredientWidget?defaultCss=false' + spkey;
 
   api_helper.make_API_call(getWidget).then(response => {
     res.send(response);
@@ -52,6 +55,43 @@ router.get('/ingredientWidget', (req, res) => {
       res.send(error);
     });
 });
+
+router.get('/populateIngredients', (req, res) => {
+  let diet = ''
+  // const diet = req['query'].diet
+  // to be added when dietary restrictions are implemented
+  const recipes = path +'/recipes/random?limitLicense=false&tags=' + diet + '&number=20&' + spkey 
+  let ingredients = []
+
+  api_helper.make_API_call(recipes).then(
+    response => {
+      const ignore = 'Baking Spices and Seasonings Condiments Bakery/Bread Pasta and Rice Beverages Frozen Canned and Jarred'
+      const ingredients = []
+      response.recipes.forEach(recipe => {
+
+      recipe.extendedIngredients.forEach(ingredient => {
+        if (ignore.includes(ingredient.aisle) || ingredients.includes(ingredient.name)) {
+        } else {
+          
+          ingredients.push({
+            id: ingredient.id,
+            name: ingredient.name,
+            aisle: ingredient.aisle,
+            imageUrl: "https://spoonacular.com/cdn/ingredients_500x500/" + ingredient.imageimgUrl 
+          })
+
+        }});
+      });
+      res.json(ingredients)
+    }).catch(error=>{
+      res.send(error);
+    });
+})
+
+
+// https://api.spoonacular.com/recipes/random?limitLicense=<boolean>&tags=<string>&number=<number>
+
+
 
 // 'https://api.spoonacular.com/food/ingredients/search?query=potato&number=10&apiKey=7feb8ca6835644a58fb03fa022cff140'
 

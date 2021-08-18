@@ -27,6 +27,8 @@ class IngredientIndex extends React.Component {
               {this.props.ingredients[0].map((ingredient, index) => (
                 <li className="index-ingredient" key={index}>
                   <div>{ingredient['name']}</div>
+                  {console.log(ingredient)}
+                  <img src={ingredient.imageUrl} />
                   <IngredientIndexItem 
                     id={index}
                   />

@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "alcme.js",
-  "engines" : {
+  "engines": {
     "node": "10.13.0"
   },
   "scripts": {
     "server:debug": "nodemon --inspect alcme.js",
     "start": "node alcme.js",
-
     "server": "nodemon alcme.js",
     "frontend-install": "npm install --prefix frontend",
     "frontend": "npm start --prefix frontend",
@@ -30,6 +29,7 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^6.2.1",
