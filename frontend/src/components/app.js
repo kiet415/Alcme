@@ -1,4 +1,5 @@
 import React from 'react';
+const path = require("path")
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Switch } from 'react-router-dom';
 import NavBarContainer from './nav/navbar_container';
