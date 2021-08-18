@@ -40,6 +40,7 @@
     "passport-jwt": "^4.0.0",
     "redux": "^4.1.1",
     "redux-logger": "^3.0.6",
+    "request": "^2.88.2",
     "spoonacular_api": "^1.0.0",
     "validator": "^13.6.0"
   },
