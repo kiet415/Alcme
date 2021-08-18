@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchRecipes: () => dispatch(fetchRecipes())
+    fetchRecipes: () => dispatch(fetchRecipes()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecipeIndex);
