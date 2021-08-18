@@ -69,7 +69,7 @@ router.get('/populateIngredients', (req, res) => {
       const ignore = 'Baking Spices and Seasonings Condiments Bakery/Bread Pasta and Rice Beverages Frozen Canned and Jarred'
       const ingredients = []
       response.recipes.forEach(recipe => {
-
+        console.log(recipe)
       recipe.extendedIngredients.forEach(ingredient => {
         if (ignore.includes(ingredient.aisle) || ingredients.includes(ingredient.name)) {
         } else {
@@ -78,7 +78,7 @@ router.get('/populateIngredients', (req, res) => {
             id: ingredient.id,
             name: ingredient.name,
             aisle: ingredient.aisle,
-            imageUrl: "https://spoonacular.com/cdn/ingredients_500x500/" + ingredient.imageimgUrl 
+            imageUrl: "https://spoonacular.com/cdn/ingredients_500x500/" + ingredient.image
           })
 
         }});

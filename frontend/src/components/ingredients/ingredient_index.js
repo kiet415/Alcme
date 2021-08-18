@@ -50,17 +50,22 @@ class IngredientIndex extends React.Component {
             ))}
             <h1>List of all ingredients</h1>
             <ul className="index-ul">
-              {this.props.ingredients[0].map((ingredient, index) => (
-
+              {this.props.ingredients[0].map((ingredient, index) => {
+                if (ingredient.imageUrl)
+                return (
+                
                 <div className="index-div">
                   <li className="index-ingredient"  onClick={((e) => this.handleClick(e))} key={index}>
-                    <div>{ingredient['name']}</div>
+                    <div>
+                      <img height='100px' src={ingredient.imageUrl} />
+                      {ingredient['name']}</div>
                   </li>
                   <IngredientIndexItem 
                      id={index}
                   />
-                </div>
-              ))}
+                </div> 
+                )
+              })}
   
             </ul>
             
