@@ -72,7 +72,7 @@ router.get('/populateIngredients', (req, res) => {
       recipe.extendedIngredients.forEach(ingredient => {
         if (ignore.includes(ingredient.aisle) || ingredients.includes(ingredient.name)) {
         } else {
-          
+
           ingredients.push({
             id: ingredient.id,
             name: ingredient.name,
