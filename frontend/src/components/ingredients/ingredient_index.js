@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import IngredientIndexItem from './ingredient_index_item';
 import { Link } from 'react-router-dom';
