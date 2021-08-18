@@ -6,7 +6,8 @@ const axios = require('axios')
 const api_helper = require('./apiHelper');
 const { response } = require('express');
 const { spkey } = require('../../../config/keys_dev');
-
+const Recipe = require('../../../models/Recipe')
+const Ingredient= require('../../../models/Ingredient')
 const path = 'https://api.spoonacular.com/';
 
 router.get('/recipeAutofill', (req, res) => {
@@ -61,25 +62,27 @@ router.get('/populateIngredients', (req, res) => {
   let diet = ''
   // const diet = req['query'].diet
   // to be added when dietary restrictions are implemented
-  const recipes = path +'/recipes/random?limitLicense=false&tags=' + diet + '&number=20&' + spkey 
+  const recipes = path +'/recipes/random?limitLicense=false&tags=' + diet + '&number=2&' + spkey 
   let ingredients = []
 
   api_helper.make_API_call(recipes).then(
     response => {
       const ignore = 'Baking Spices and Seasonings Condiments Bakery/Bread Pasta and Rice Beverages Frozen Canned and Jarred'
-      const ingredients = []
+      const ingredients = [];
       response.recipes.forEach(recipe => {
         console.log(recipe)
+        let recip = new Recipe
       recipe.extendedIngredients.forEach(ingredient => {
-        if (ignore.includes(ingredient.aisle) || ingredients.includes(ingredient.name)) {
+        if (ignore.includes(ingredient.aisle) || ingredients.includes(ingredient)) {
         } else {
 
-          ingredients.push({
+          nIng = {
             id: ingredient.id,
             name: ingredient.name,
             aisle: ingredient.aisle,
             imageUrl: "https://spoonacular.com/cdn/ingredients_500x500/" + ingredient.image
-          })
+          }
+          ingredients.push()
 
         }});
       });
