@@ -13,14 +13,20 @@ export const createRecipe = data => {
     return axios.post(`/api/recipes/create`, data)
 }
 
-// <----add 
-// update recipe in db
 
-// export const updateRecipe = data => {
-    // return axios.post('/api/recipes/update', data)
-// }
+export const getRecipesByIngredients = (ingredients) => {
+    console.log(ingredients)
+    return axios.post(`/api/spoon/findRecipeByIngredients`, {params: {ingredients: ingredients}})
+}
+// router.get('/findRecipeByIngredients', (req, res) => {
+//     const ingredients = req['query'].ingredients;
+//     const findByIngredients = path + '/recipes/findByIngredients?ingredients='
+//     + ingredients +'&number=10&limitLicense=false&ignorePantry=false&'+ spkey;
+//      api_helper.make_API_call(findByIngredients).then(response => {
+//         res.json(response);
+//      })
+//       .catch(error => {
+//         res.send(error);
+//       });
+//   })
 
-// export const spoonIngredients
-    // return axios.post
-
-// ---> done

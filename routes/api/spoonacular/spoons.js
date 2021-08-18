@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 const request = require('request');
 const axios = require('axios')
 const api_helper = require('./apiHelper');
-const { spkey } = require('../../../config/keys_dev.js');
 const { response } = require('express');
+const { spkey } = require('../../../config/keys_dev');
+
 const path = 'https://api.spoonacular.com/';
 
 router.get('/recipeAutofill', (req, res) => {
@@ -19,11 +20,11 @@ router.get('/recipeAutofill', (req, res) => {
   }); 
 });
 
-router.get('/findRecipeByIngredients', (req, res) => {
-  // 
-  const ingredients = req['query'].ingredients;
+
+router.post('/findRecipeByIngredients', (req, res) => {
+  const ingredients = String(req.body.params.ingredients); 
   const findByIngredients = path + '/recipes/findByIngredients?ingredients='
-  + ingredients +'&number=10&limitLicense=false&ignorePantry=false&'+ spkey;
+  + ingredients +'&number=10&limitLicense=false&ignorePantry=false&'+ spkey; 
    api_helper.make_API_call(findByIngredients).then(response => {
       res.json(response);
    })
