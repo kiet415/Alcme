@@ -7,7 +7,7 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import IngredientShowContainer from './ingredients/ingredient_show_container';
 import RecipeShowContainer from './recipes/recipe_show_container';
-import CreateRecipe from './recipes/recipe_create'
+import RecipeCreateContainer from './recipes/recipe_create_container'
 import IngredientIndexContainer from './ingredients/ingredient_index_container';
 import RecipeIndexContainer from './recipes/recipe_index_container'
 const App = () => (
@@ -19,8 +19,9 @@ const App = () => (
         <Route exact path="/" component={IngredientIndexContainer} />
         <Route exact path="/ingredient/:id" component={IngredientShowContainer}/>
         <Route exact path="/recipes" component={RecipeIndexContainer}/>
+        <Route exact path="/recipe/create" component={RecipeCreateContainer}/>
         <Route exact path="/recipe/:id" component={RecipeShowContainer}/>
-        <Route exact path="/recipe/create" component={CreateRecipe}/>
+        
     </Switch>
   </div>
 );

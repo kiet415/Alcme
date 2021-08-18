@@ -3,8 +3,8 @@ import { fetchRecipe } from '../../actions/recipe_actions';
 import RecipeShow from './recipe_show';
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state)
-    console.log(ownProps)
+    // console.log(state)
+    // console.log(ownProps)
     return {
         recipe: state.recipes.all[ownProps.match.params.id]
     };

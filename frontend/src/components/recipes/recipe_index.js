@@ -15,7 +15,7 @@ class RecipeIndex extends React.Component {
                 Recipe index page
                 <div>
                     {this.props.recipes.map((recipe,index) => (
-                        <div>
+                        <div key={index}>
                             <Link to={`recipe/${index}`}>
                                 
                                 {recipe.title}
