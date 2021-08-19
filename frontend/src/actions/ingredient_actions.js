@@ -22,9 +22,9 @@ export const fetchIngredients = () => dispatch => {
     )};
 
 // differentiate from spoonApi call 
-export const fetchIngredient = () => dispatch => {
+export const fetchIngredient = (id) => dispatch => {
     return (
-        APIUtil.getIngredient()
+        APIUtil.getIngredient(id)
             .then(ingredient => dispatch(receiveIngredient(ingredient)))
             .catch(err => console.log(err))
     )};

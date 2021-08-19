@@ -14,8 +14,8 @@ const RecipeSchema = new Schema ({
     image: {
         type: String
     },
-    usedIngredientCount: {
-        type: Number
+    ingredients: {
+        type: Array
     },
     usedIngredients: {
         type: Array

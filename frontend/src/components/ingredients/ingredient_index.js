@@ -36,7 +36,7 @@ class IngredientIndex extends React.Component {
         
       });
     }
-    
+
   }
   render() {
     if(this.props.ingredients[0] === undefined) return null;
@@ -55,13 +55,14 @@ class IngredientIndex extends React.Component {
             <ul className="index-ul">
               {this.props.ingredients[0].map((ingredient, index) => (
                 <div className="index-div">
+                  
                   <li className="index-ingredient"  onClick={((e) => this.handleClick(e))} key={index}>
                     <div className="ingredient-name">{ingredient['name']}</div>
                     <img src={ingredient.imageUrl}/>
                   </li>
                   <br/>
                   <IngredientIndexItem 
-                     id={index}
+                     id={index} ingId={ingredient.id}
                   />
                 </div>
               ))}
