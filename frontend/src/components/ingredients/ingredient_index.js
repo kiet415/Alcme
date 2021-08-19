@@ -36,7 +36,7 @@ class IngredientIndex extends React.Component {
         
       });
     }
-    
+
   }
   render() {
     if(this.props.ingredients[0] === undefined) return null;
@@ -45,31 +45,34 @@ class IngredientIndex extends React.Component {
     return (
       <div className="main-window">
         <div className="index-home"> 
+        <h1>List of all ingredients</h1>
           <div className="ingredient-list-component">
-            <h1>List of all ingredients</h1>
+            
             <ul className="index-ul">
               {this.props.ingredients[0].map((ingredient, index) => (
                 <div className="index-div">
+                  
                   <li className="index-ingredient"  onClick={((e) => this.handleClick(e))} key={index}>
                     <div className="ingredient-name">{ingredient['name']}</div>
-                    <div><img src={ingredient.imageUrl}/></div>
+                    <img src={ingredient.imageUrl}/>
                   </li>
                   <br/>
                   <IngredientIndexItem 
-                     id={index}
+                     id={index} ingId={ingredient.id}
                   />
                 </div>
               ))}
   
             </ul>
-                <div className="selected-ingredients">
-                  <h1>Selected Ingredients</h1>
-                  {this.state.ingredients.map(ingredient => (
-                    <div>{ingredient} </div>
-                  ))}
-                </div>
+            <div className="selected-ingredients">
+              <h1>Selected Ingredients</h1>
+              {this.state.ingredients.map(ingredient => (
+                <div>{ingredient} </div>
+              ))}
+              <button onClick={this.handleSubmit}>Click to Search for Recipes</button>
+            </div>
           </div>
-            <button onClick={this.handleSubmit}>Click to Search for Recipes</button>
+            
         </div>
       </div>
     );

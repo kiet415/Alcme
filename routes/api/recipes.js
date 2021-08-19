@@ -22,20 +22,32 @@ router.get('/:id', (req, res) => {
     );
 });
 
-// router.post('/create', (req, res) => {
-//   req.json
-// })
-
-
-router.get('/:id', (req, res) => {
-  Recipe.findById(req.params.id)
-    .then(recipe =>
-      res.json(recipe)
-      ).catch(err =>
-      res.status(401).json({
-         noIngredientFound: "No recipe found with that ID" 
+router.post('/create', (req, res) => {
+  const rec = req.body.recipe;
+  const recipe = new Recipe(rec)
+  recipe.save()
+  Recipe.findOne({ title: recipe.title })
+    .then(newRecipe => {
+      if (newRecipe) {
+        return res.json(newRecipe)}
+        else {
+          error = {err: 'Recipe did not save'}
+        }
         })
-      );
-});
+      .catch(err =>
+         res.status(401).json(error))
+})
+
+
+// router.get('/:id', (req, res) => {
+//   Recipe.findById(req.params.id)
+//     .then(recipe =>
+//       res.json(recipe)
+//       ).catch(err =>
+//       res.status(401).json({
+//          noIngredientFound: "No recipe found with that ID" 
+//         })
+//       );
+// });
 
 module.exports = router;

@@ -6,9 +6,9 @@ export const getIngredients = () => {
 };
 
 export const getIngredient = id => {
-    return axios.get(`/api/ingredients/${id}`)
+    return axios.get(`/api/spoon/nutrition/${id}`)
 }
 
-
-// get to api/spoon/findRecipeByIngredients
-// <- 
+export const getNutrition = id => {
+    return axios.get(`/api/spoon/nutrition/${id}`)
+}
