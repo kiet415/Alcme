@@ -16,7 +16,7 @@ class RecipeIndex extends React.Component {
                 <div>
                     {this.props.recipes.map((recipe,index) => (
                         <div key={index}>
-                            <Link to={`recipe/${index}`}>
+                            <Link to={`recipe/${recipe.id}`}>
                                 
                                 {recipe.title}
                                 <img src={recipe.image}/>
