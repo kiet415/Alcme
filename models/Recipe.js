@@ -24,7 +24,9 @@ const RecipeSchema = new Schema ({
         type: String
     },
     cuisines: Array,
-    
+    user_id: {
+        type: Number
+    }
 });
   
 module.exports = Recipe = mongoose.model('recipe', RecipeSchema);
