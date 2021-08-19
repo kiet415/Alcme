@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    // fetchRecipe: () => dispatch(fetchRecipe(ownProps.match.params.id)),
+    fetchRecipe: () => dispatch(fetchRecipe(ownProps.match.params.id)),
     fetchRecipeInfo: () => dispatch(fetchRecipeInfo(ownProps.match.params.id)),
 });
 

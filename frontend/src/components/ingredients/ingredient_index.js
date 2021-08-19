@@ -31,7 +31,6 @@ class IngredientIndex extends React.Component {
       this.props.fetchRecipeByIngredients(this.state.ingredients.join(", "))
       .then( res => {
         const data = this.props.recipes[0];
-        // console.log(data)
         this.props.history.push({pathname:'/recipe/filtered', state: {recipes:data}}) ;
         
       });

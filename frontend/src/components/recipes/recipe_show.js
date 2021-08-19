@@ -9,6 +9,7 @@ class RecipeShow extends React.Component {
     }
     render() {
         if(!this.props.recipe) return null;
+        console.log(this.props)
         let recipe = this.props.recipe.all[0]
         console.log(recipe)
         return (
