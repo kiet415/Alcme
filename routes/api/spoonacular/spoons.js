@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const request = require('request');
-const axios = require('axios')
 const api_helper = require('./apiHelper');
 const { response } = require('express');
 const { spkey } = require('../../../config/keys_dev');
