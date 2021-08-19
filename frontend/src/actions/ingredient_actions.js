@@ -29,4 +29,12 @@ export const fetchIngredient = () => dispatch => {
             .catch(err => console.log(err))
     )};
 
+//needs util / reducer                  
+// export const fetchNutrition = (id) => dispatch => {
+//     return (
+//         APIUtil.getNutrition(id)
+//             .then(
+//             nutrition => dispatch(receiveNutrition(nutrition)))
+//             .catch(err => console.log(err))
+//         )}
 

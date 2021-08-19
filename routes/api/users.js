@@ -10,14 +10,14 @@ const validateLoginInput = require('../../validation/loginValidation');
 const User = require('../../models/User');
 const keys = require('../../config/keys_dev');
 
-
-router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
-router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
-  res.json({
-    id: req.user.id,
-    username: req.user.username,
-    email: req.user.email
-  });
+router.get('/current',
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    res.json({
+      id: req.user.id,
+      username: req.user.username,
+      email: req.user.email
+    });
 })
 
 router.post('/register', (req, res) => {
@@ -61,32 +61,37 @@ router.post('/register', (req, res) => {
 
 router.post('/login', (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body);
+  const username = req.body.username;
+  const password = req.body.password;
+  
   if (!isValid) {
     return res.status(400).json(errors);
   }
-  const username = req.body.username;
-  const password = req.body.password;
-  User.findOne({ username }).then(user => {
-    if (!user) {
-      errors.username = "This user does not exist";
-      return res.status(404).json(errors);
-    }
 
-    bcrypt.compare(password, user.password).then(isMatch => {
-      if (isMatch) {
-        const payload = { id: user.id, username: user.username };
+  User.findOne({ username })
+    .then(user => {
 
-        jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
-          res.json({
-            success: true,
-            token: "Bearer " + token
-          });
-        });
-      } else {
-        errors.password = "Incorrect password";
-        return res.status(400).json(errors);
-      }
-    });
+      if (!user) {
+        errors.username = "This user does not exist";
+        return res.status(404).json(errors);
+        } 
+
+      bcrypt.compare(password, user.password).then(isMatch => {
+      
+        if (isMatch) {
+          const payload = { id: user.id, username: user.username };
+
+          jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
+            res.json({
+              success: true,
+              token: "Bearer " + token
+                });
+              });
+            } else {
+              errors.password = "Incorrect password";
+              return res.status(400).json(errors);
+              }
+      });
   });
 });
 
