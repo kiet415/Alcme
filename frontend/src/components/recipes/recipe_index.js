@@ -17,7 +17,7 @@ class RecipeIndex extends React.Component {
                 <div className="recipe-column-div">
                     {this.props.recipes.map((recipe,index) => (
                         <div key={index} className="recipe-box">
-                            <Link to={`recipe/${index}`} className="recipe-box-title">
+                            <Link to={`recipe/${recipe.id}`} className="recipe-box-title">
                                 <div className="recipe-title">
                                     {recipe.title}
                                 </div>
