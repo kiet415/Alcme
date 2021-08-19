@@ -13,7 +13,7 @@ export const receiveIngredient = ingredient => ({
     type: RECEIVE_INGREDIENT,
     ingredient
 });
-
+// differentiate from spoonApi call 
 export const fetchIngredients = () => dispatch => {
     return (
         APIUtil.getIngredients()
@@ -21,10 +21,20 @@ export const fetchIngredients = () => dispatch => {
             .catch(err => console.log(err))
     )};
 
-
+// differentiate from spoonApi call 
 export const fetchIngredient = () => dispatch => {
     return (
         APIUtil.getIngredient()
             .then(ingredient => dispatch(receiveIngredient(ingredient)))
             .catch(err => console.log(err))
     )};
+
+//needs util / reducer                  
+// export const fetchNutrition = (id) => dispatch => {
+//     return (
+//         APIUtil.getNutrition(id)
+//             .then(
+//             nutrition => dispatch(receiveNutrition(nutrition)))
+//             .catch(err => console.log(err))
+//         )}
+

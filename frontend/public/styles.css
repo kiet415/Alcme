@@ -52,7 +52,7 @@ table {
     flex-wrap: wrap;
 }
 
-.index-ingredient {
+.index-div {
     padding: 10px;
     margin-right: 10px;
     margin-left: 10px;
@@ -372,4 +372,8 @@ align-items: center;
     color: rgb(46, 46, 46);
     background: lightgrey;
     box-shadow: black 2px 2px 2px 2px; */
+}
+
+.filtered-recipes {
+    display: flex;
 }

@@ -1,6 +1,11 @@
 /config/keys.js
-/node_modules
-.DS_store
+/node_modules -f
+.DS_store -f
 
 /config/keys_dev.js
-/config/keys_prod.js
+/config/keys_prod.js -f
+/keys.js -f 
+/config -f
+
+config/keys_dev.js
+node_modules

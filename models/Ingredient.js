@@ -16,20 +16,7 @@ const IngredientSchmema = new Schema({
   },
 
   nutrition: {
-    nutrients: [ 
-      {
-        name: {
-        type: String
-        },
-        amount: {
-          type: Number
-        },
-        unit: {
-          type: String
-
-        }
-      }
-    ]
+    nutrients: Array
   },
     category: {
       type: String

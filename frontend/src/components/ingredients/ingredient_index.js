@@ -4,55 +4,75 @@ import { Link } from 'react-router-dom';
 class IngredientIndex extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      ingredients : [],
+
+    }
   }
 
   componentDidMount() {
     this.props.fetchIngredients();
   }
-
+  handleClick = (e) => {
+    //console.log(e.target.innerText)
+    if(!this.state.ingredients.includes(e.target.innerText)) {
+      this.setState({ingredients: this.state.ingredients.concat(e.target.innerText) })
+    } else {
+      let idx = this.state.ingredients.indexOf(e.target.innerText)
+      let newArray = this.state.ingredients.slice(0,idx).concat(this.state.ingredients.slice(idx+1, this.state.ingredients.length))
+      this.setState({ingredients: newArray})
+    }
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    if(this.state.ingredients.length === 0) {
+      alert("Please select at least 1 ingredient")
+    } else {
+      this.props.fetchRecipeByIngredients(this.state.ingredients.join(", "))
+      .then( res => {
+        const data = this.props.recipes[0];
+        // console.log(data)
+        this.props.history.push({pathname:'/recipe/filtered', state: {recipes:data}}) ;
+        
+      });
+    }
+    
+  }
   render() {
     if(this.props.ingredients[0] === undefined) return null;
     // let imgUrl = "https://spoonacular.com/cdn/ingredients_500x500/"
+    console.log(this.props)
     return (
       <div className="main-window">
         <h1>Alcme</h1>
-          <Link to="/recipes" className="ingredient-index-button">View Recipes</Link>
-          <br/>
+          <Link to="/recipes" className="ingredient-index-button">Recipe index page</Link>
+           <br/>
           <Link to="/recipe/create" className="ingredient-index-button">Create Recipe</Link>
-          <br/>    
-        <div className="index-home">       
+        <div className="index-home"> 
           <div className="ingredient-list-component">
             <h1>List of all ingredients</h1>
             <ul className="index-ul">
               {this.props.ingredients[0].map((ingredient, index) => (
-                <li className="index-ingredient" key={index}>
-                  <div className="ingredient-name">{ingredient['name']}</div>
+                <div className="index-div">
+                  <li className="index-ingredient"  onClick={((e) => this.handleClick(e))} key={index}>
+                    <div className="ingredient-name">{ingredient['name']}</div>
+                  </li>
                   <br/>
                   <IngredientIndexItem 
-                    id={index}
+                     id={index}
                   />
-                </li>
+                </div>
               ))}
   
             </ul>
-          </div>
-                                          {/* {(this.state.ingredients.length !== 0) ?  */}
-          <div className="selected-ingredients">
-            <h3>Selected Ingredients</h3>
-              {/* add logic for only showing when ingredients are selected */}
-          </div> 
-          {/* } */}
-            
-            
-            {/* {this.props.ingredients.map(ingredient => (
-                <div>
-                    <img src={ingredient.image}/>
-                    <img src={ingredient.name}/>
-                    <IngredientIndexItem
-                        ingredient={ingredient}
-                    />
+                <div className="selected-ingredients">
+                  <h1>Selected Ingredients</h1>
+                  {this.state.ingredients.map(ingredient => (
+                    <div>{ingredient} </div>
+                  ))}
                 </div>
-            ))} */}
+          </div>
+            <button onClick={this.handleSubmit}>Click to Search for Recipes</button>
         </div>
       </div>
     );
