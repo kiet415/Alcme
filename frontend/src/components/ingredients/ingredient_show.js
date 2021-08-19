@@ -1,40 +1,42 @@
 import React from 'react';
 import { Chart } from "react-google-charts";
-class IngredientIndex extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+class IngredientShow extends React.Component {
 
   componentDidMount() {
-    this.props.fetchIngredient()
+    this.props.fetchIngredient(this.props.match.params.id)
   }
   render() {
-    console.log(this.props)
-    if(!this.props.ingredient) return null;
+    const { ingredient } = this.props
+    if(!ingredient) return null;
     return (
       <div className="ingredient-show-page">
+        {console.log(this.props.ingredient.nutrition)}
         <h1 className="ingredient-title">{this.props.ingredient.name}</h1>
         <div className="ingredient-show-container">
-            
+
             <ul className="ingredient-nutrition">
                 <h3>Nutrition</h3>
-                <li>Calories : 120 cal </li>
-                <li>Fats : 2g </li>
-                <li>Carbs : 14g </li>
-                <li>Protein : 2g </li>
-                <li></li>
+                  {this.props.ingredient.nutrition.nutrients
+                  .map( nutrient => {
+                    return (
+                      <li>
+                        {nutrient.name} : {nutrient.amount}{nutrient.unit}
+                      </li>
+                        )
+                      })
+                  }
             </ul>
             <div className="ingredient-pie-chart"> 
-                <Chart
-                    width={'1000px'}
-                    height={'800px'}
+                <Chart 
+                    width={'400px'}
+                    height={'400px'}
                     chartType="PieChart"
                     loader={<div>Loading Chart</div>}
                     data={[
                         ['Caloric Breakdown', 'Recommened Daily Serving'],
-                        ['Protein', 2],
-                        ['Fat', 2],
-                        ['Carbs', 14],
+                        ['Protein', this.props.ingredient.nutrition.caloricBreakdown.percentProtein],
+                      ['Fat', this.props.ingredient.nutrition.caloricBreakdown.percentFat],
+                      ['Carbs', this.props.ingredient.nutrition.caloricBreakdown.percentCarbs]
                         
                     ]}
                     options={{
@@ -52,4 +54,4 @@ class IngredientIndex extends React.Component {
   }
 }
 
-export default IngredientIndex;
+export default IngredientShow;

@@ -27,15 +27,15 @@ router.get('/:id', (req, res) => {
 // })
 
 
-router.get('/:id', (req, res) => {
-  Recipe.findById(req.params.id)
-    .then(recipe =>
-      res.json(recipe)
-      ).catch(err =>
-      res.status(401).json({
-         noIngredientFound: "No recipe found with that ID" 
-        })
-      );
-});
+// router.get('/:id', (req, res) => {
+//   Recipe.findById(req.params.id)
+//     .then(recipe =>
+//       res.json(recipe)
+//       ).catch(err =>
+//       res.status(401).json({
+//          noIngredientFound: "No recipe found with that ID" 
+//         })
+//       );
+// });
 
 module.exports = router;
