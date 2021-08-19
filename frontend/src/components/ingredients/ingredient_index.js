@@ -44,10 +44,6 @@ class IngredientIndex extends React.Component {
     console.log(this.props)
     return (
       <div className="main-window">
-        <h1>Alcme</h1>
-          <Link to="/recipes" className="ingredient-index-button">Recipe index page</Link>
-           <br/>
-          <Link to="/recipe/create" className="ingredient-index-button">Create Recipe</Link>
         <div className="index-home"> 
           <div className="ingredient-list-component">
             <h1>List of all ingredients</h1>
