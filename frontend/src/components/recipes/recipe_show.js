@@ -12,16 +12,16 @@ class RecipeShow extends React.Component {
         let recipe = this.props.recipe.all[0]
         console.log(recipe)
         return (
-            
-            <div> Recipe show here
-                {recipe.title}
+            <div className="recipe-show-page">
+                {this.props.recipe.title}
+            <br/>
+            <br/>
                 <img src={recipe.image}/>
 
                 <div> 
                     Instructions
                     {recipe.instructions}
                 </div>
-                
             </div>
         );
     }

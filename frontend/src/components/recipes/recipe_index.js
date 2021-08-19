@@ -12,13 +12,17 @@ class RecipeIndex extends React.Component {
         console.log(this.props)
         return (
             <div>
-                Recipe index page
-                <div>
+                <h1 className="recipe-index-title">All Recipes</h1>
+                <br/>
+                <div className="recipe-column-div">
                     {this.props.recipes.map((recipe,index) => (
-                        <div key={index}>
-                            <Link to={`recipe/${recipe.id}`}>
-                                
-                                {recipe.title}
+                        <div key={index} className="recipe-box">
+                            <Link to={`recipe/${recipe.id}`} className="recipe-box-title">
+                                <div className="recipe-title">
+                                    {recipe.title}
+                                </div>
+                                <br/>
+                                <br/>
                                 <img src={recipe.image}/>
                             </Link>
                         </div>

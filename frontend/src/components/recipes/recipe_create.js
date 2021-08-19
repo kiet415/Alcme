@@ -44,64 +44,75 @@ class RecipeCreate extends React.Component {
     }
     render() {
         return (
-            <div> 
+            <div className = "recipe-create-page"> 
                 <h1>CREATE RECIPE PAGE</h1>
                 <div className="form-page">
                         
                     <div className="review-box"> 
                         <form onSubmit={this.handleAdd}>
                             <div>
-                                <label>Title</label>
+                                <label>Title </label>
                                 <input
                                     type="text"
                                     value={this.state.img}
                                     onChange={(e) => this.update("img", e)}
-                                    
+                                    className="input"
                                 />
-                                <label>Image URL</label>
+                                <br/>
+                                <br/>
+                                <label>Image URL: </label>
                                 <input
                                     type="text"
                                     value={this.state.title}
                                     onChange={(e) => this.update("title", e)}
-                                    
+                                    className="input"
+                                    placeholder="optional"
                                 />
                             </div>
                             <div> 
-                                <div>After each ingredient/instruction, click to add!</div>
-                                <label>Add to Ingredients</label>
+                                <br/>
+                                <div className="form-dir">Fill in ingredients and instructions one by one. After each ingredient/instruction, click to add!</div>
+                                <br/>
+                                <label>Add to Ingredients: </label>
                                 <input
                                     type="text"
                                     value={this.state.ingredients}
                                     onChange={(e) => this.update("ingredients", e)}
-                                    
+                                    className="input"
                                 />
-                                
-                                <label>Add to Instructions</label>
+                                <br/>
+                                <br/>
+                                <label>Add to Instructions: </label>
                                 
                                 <textarea
                                     value={this.state.instructions}
                                     onChange={(e) => this.update('instructions', e)}
                                     placeholder="Instructions here"
+                                    className="input"
                                 /> 
                             </div>
 
                            
-
-                            <input className="form-btn" type="submit" value="Add an instruction/ingredient"/>
+                            <br/>
+                            <div className="form-btns">
+                                <input className="ins-btn" type="submit" value="Add an instruction/ingredient"/>
                             
-                            <button onClick={this.handleSubmit}>Add Recipe!</button>
+                                <button className="rec-btn"onClick={this.handleSubmit}>Add Recipe!</button>
+                            </div>
                         </form>
+                        <br/>
                     </div>
-
-                    <div>List of Ingredients Added </div>
-                    {this.state.finishedIngredients.map((ingredient, index) => (
-                        <div key={index}>{index+1}. {ingredient}</div>
-                    ))}
-                    <br/>
-                    <div>List of Instructions Added </div>
-                    {this.state.finishedInstructions.map((instruction, index) => (
-                        <div key={index}>{index+1}. {instruction}</div>
-                    ))}
+                        <div className="create-recipe-lists">
+                            <div className="create-recipe-ingredients-list">List of Ingredients Added </div>
+                            {this.state.finishedIngredients.map((ingredient, index) => (
+                                <div key={index}>{index+1}. {ingredient}</div>
+                            ))}
+                            <br/>
+                            <div className="create-recipe-directions-list">List of Instructions Added </div>
+                            {this.state.finishedInstructions.map((instruction, index) => (
+                                <div key={index}>{index+1}. {instruction}</div>
+                            ))}
+                        </div>
                 </div>
             </div>
         );

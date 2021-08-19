@@ -24,8 +24,9 @@ class IngredientIndex extends React.Component {
                 <li>Protein : 2g </li>
                 <li></li>
             </ul>
-            <div className="ingredient-pie-chart"> 
+            <div > 
                 <Chart
+                    cssClassName="ingredient-pie-chart"
                     width={'1000px'}
                     height={'800px'}
                     chartType="PieChart"
