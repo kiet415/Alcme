@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema;
+const Schema = mongoose.Schema; 
 
 const RecipeSchema = new Schema ({
     id: {
@@ -8,6 +8,9 @@ const RecipeSchema = new Schema ({
     title: {
         type: String
     },
+    readyInMinutes: Number,
+    servings: Number,
+
     image: {
         type: String
     },
@@ -20,9 +23,8 @@ const RecipeSchema = new Schema ({
     instructions: {
         type: String
     },
-    servings: {
-        type: Number
-    }
-})
-
+    cuisines: Array,
+    
+});
+  
 module.exports = Recipe = mongoose.model('recipe', RecipeSchema);
