@@ -10,8 +10,10 @@ class RecipeShow extends React.Component {
     render() {
         console.log(this.props)
         return (
-            <div>
+            <div className="recipe-show-page">
                 {this.props.recipe.title}
+            <br/>
+            <br/>
                 <img src={this.props.recipe.image}/>
             </div>
         );

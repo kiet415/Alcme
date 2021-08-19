@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "alcme.js",
-  "engines" : {
+  "engines": {
     "node": "10.14.2"
   },
   "scripts": {
     "server:debug": "nodemon --inspect alcme.js",
     "start": "node alcme.js",
-
     "server": "nodemon alcme.js",
     "frontend-install": "npm install --prefix frontend",
     "frontend": "npm start --prefix frontend",
