@@ -32,6 +32,7 @@ class RecipeCreate extends React.Component {
             img: this.state.img,
             ingredients: this.state.finishedIngredients,
             instruction: this.state.finishedInstructions,
+            user_id: 1, 
         }
         this.props.createRecipe(recipe);
         console.log(recipe)
@@ -103,15 +104,18 @@ class RecipeCreate extends React.Component {
                         <br/>
                     </div>
                         <div className="create-recipe-lists">
-                            <div className="create-recipe-ingredients-list">List of Ingredients Added </div>
+                            <div className="create-recipe-ingredients-list">List of Ingredients Added 
                             {this.state.finishedIngredients.map((ingredient, index) => (
                                 <div key={index}>{index+1}. {ingredient}</div>
                             ))}
+                            </div>
                             <br/>
-                            <div className="create-recipe-directions-list">List of Instructions Added </div>
+                            <div className="create-recipe-directions-list">List of Instructions Added 
                             {this.state.finishedInstructions.map((instruction, index) => (
                                 <div key={index}>{index+1}. {instruction}</div>
+                                
                             ))}
+                            </div>
                         </div>
                 </div>
             </div>

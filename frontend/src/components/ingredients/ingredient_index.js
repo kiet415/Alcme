@@ -56,6 +56,7 @@ class IngredientIndex extends React.Component {
                 <div className="index-div">
                   <li className="index-ingredient"  onClick={((e) => this.handleClick(e))} key={index}>
                     <div className="ingredient-name">{ingredient['name']}</div>
+                    <div><img src={ingredient.imageUrl}/></div>
                   </li>
                   <br/>
                   <IngredientIndexItem 
