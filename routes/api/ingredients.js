@@ -2,14 +2,16 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
-
+const api_helper = require('./spoonacular/apiHelper');
 const Ingredient = require('../../models/Ingredient');
 // const validText = require('./valid-text');
 // import and define validations
 
 router.get('/', (req, res) => {
-  Ingredient.find({}).then(list => res.json(list));
-})
+  Ingredient.aggregate([{
+    $sample: { size: 50 }
+  }]).then(list => res.json(list));
+}); 
 
 router.get('/:id', (req, res) => {
   Ingredient.findById(req.params.id)
