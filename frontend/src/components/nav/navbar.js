@@ -22,8 +22,15 @@ class NavBar extends React.Component {
       } else {
         return (
             <div>
-                <Link to={'/signup'} className="signup-button">Signup</Link>
-                <Link to={'/login'} className="login-button">Login</Link>
+              <a href="http://localhost:3000/#/">
+                <img src="ALcme.png"></img>
+              </a>
+              <br/>
+              <Link to="/recipe/create" className="ingredient-index-button">Create Recipe</Link>
+              <br/>
+              <Link to="/recipes" className="ingredient-index-button">Recipe index page</Link>
+              <Link to={'/signup'} className="signup-button">Signup</Link>
+              <Link to={'/login'} className="login-button">Login</Link>
             </div>
         );
       }
