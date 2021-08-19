@@ -10,6 +10,7 @@ export const getRecipe = id => {
 }
 // change to create recipe in db
 export const createRecipe = data => {
+    console.log(data)
     return axios.post(`/api/recipes/create`, data)
 }
 
@@ -17,15 +18,21 @@ export const createRecipe = data => {
 export const getRecipesByIngredients = (ingredients) => {
     return axios.post(`/api/spoon/findRecipeByIngredients`, {params: {ingredients: ingredients}})
 };
-// router.get('/findRecipeByIngredients', (req, res) => {
-//     const ingredients = req['query'].ingredients;
-//     const findByIngredients = path + '/recipes/findByIngredients?ingredients='
-//     + ingredients +'&number=10&limitLicense=false&ignorePantry=false&'+ spkey;
-//      api_helper.make_API_call(findByIngredients).then(response => {
-//         res.json(response);
-//      })
-//       .catch(error => {
-//         res.send(error);
-//       });
-//   })
+
+
+export const getRecipeInfo = id => {
+    return axios.get(`/api/spoon/recipeinfo/${id}`)
+}
+// router.get('/recipeinfo/:id', (req, res) => {
+
+//     api_helper.make_API_call(
+//       path + `/recipes/informationBulk?ids=${req.params.id}`
+//         + `&includeNutritioin=true&` + spkey)
+//           .then(response => {
+//             res.json(response)
+//               })
+//             .catch(err => 
+//               res.status(404)
+//                 );
+//   });
 

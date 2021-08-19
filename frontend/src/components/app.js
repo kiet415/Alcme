@@ -16,6 +16,7 @@ const App = () => (
   <div className="root-home">
     <NavBarContainer />
     <Switch>
+
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path="/" component={IngredientIndexContainer} />
@@ -24,6 +25,7 @@ const App = () => (
         <Route exact path="/recipe/create" component={RecipeCreateContainer}/>
         <Route exact path="/recipe/:id" component={RecipeShowContainer}/>
         <Route exact path="/recipe/filtered" component={RecipeFiltered}/>
+
     </Switch>
   </div>
 );

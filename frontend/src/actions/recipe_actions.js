@@ -41,9 +41,16 @@ export const fetchRecipeByIngredients = (id) => dispatch => {
             .catch(err => console.log(err))
     )};    
 
+export const fetchRecipeInfo = (id) => dispatch => {
+    return (
+        APIUtil.getRecipeInfo(id)
+            .then(recipe => dispatch(receiveRecipe(recipe)))
+            .catch(err => console.log(err))
+    )};  
+
 export const createRecipe = (data) => dispatch => {
     return (
         APIUtil.createRecipe(data)
-            .then(recipe => dispatch(receiveRecipe(recipe)))
+            .then(recipe => dispatch(receiveNewRecipe(recipe)))
             .catch(err => console.log(err))
     )};

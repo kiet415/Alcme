@@ -11,7 +11,7 @@ const RecipeReducer = (state = {}, action) => {
             newState.all = action.recipe.data;
             return newState;
         case RECEIVE_NEW_RECIPE:
-            newState.new = action.tweet.data
+            newState.new = action.recipe.data
             return newState;
         default:
             return state;

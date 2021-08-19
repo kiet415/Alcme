@@ -5,14 +5,23 @@ class RecipeShow extends React.Component {
         super(props);
     }
     componentDidMount() {
-        this.props.fetchRecipe();
+        this.props.fetchRecipeInfo();
     }
     render() {
-        console.log(this.props)
+        if(!this.props.recipe) return null;
+        let recipe = this.props.recipe.all[0]
+        console.log(recipe)
         return (
-            <div>
+            <div className="recipe-show-page">
                 {this.props.recipe.title}
-                <img src={this.props.recipe.image}/>
+            <br/>
+            <br/>
+                <img src={recipe.image}/>
+
+                <div> 
+                    Instructions
+                    {recipe.instructions}
+                </div>
             </div>
         );
     }

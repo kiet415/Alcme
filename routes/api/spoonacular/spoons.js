@@ -72,7 +72,7 @@ router.get('/nutrition/:id', (req, res) => {
 
 
 //get recipe details 
-router.get('/recipinfo/:id', (req, res) => {
+router.get('/recipeinfo/:id', (req, res) => {
 
   api_helper.make_API_call(
     path + `/recipes/informationBulk?ids=${req.params.id}`

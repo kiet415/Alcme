@@ -5,7 +5,8 @@ import IngredientIndex from './ingredient_index';
 
 const mapStateToProps = (state) => {
     return {
-        ingredients: Object.values(state.ingredients)
+        ingredients: Object.values(state.ingredients),
+        recipes: Object.values(state.recipes),
     };
 };
 

@@ -11,10 +11,12 @@ class IngredientIndexItem extends React.Component {
 
             <div>
                 {/* <Link className="item-name" to={`/ingredient/${this.props.ingredient.id}`} > */}
+
                 
                 <Link key={this.props.id}className="item-name" to={`/ingredient/${this.props.ingId}`}>
                     
                     Nutrition Data
+
                 </Link>
             </div>
         </div>

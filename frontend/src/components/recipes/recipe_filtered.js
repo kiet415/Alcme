@@ -3,26 +3,41 @@ import { Link } from 'react-router-dom';
 class RecipeFiltered extends React.Component {
     constructor(props) {
         super(props);
+        
     }
     componentDidMount() {
         //this.props.fetchRecipes();
     }
+    
     render() {
         //if(this.props.recipes === undefined) return null;
-        console.log(this.props)
+        let recipes = this.props.location.state.recipes
+        
         return (
             <div>
                 Recipe Filtered Page
                 <div>
-                    {/* {this.props.recipes.map((recipe,index) => (
-                        <div key={index}>
-                            <Link to={`recipe/${index}`}>
-                                
-                                {recipe.title}
-                                <img src={recipe.image}/>
+                    {recipes.map((recipe,index) => (
+                        <div className="filtered-recipes"key={index}>
+                            <Link  to={`/recipe/${recipe.id}`}>
+                                <div>{recipe.title}</div>
+                                <div><img src={recipe.image}/></div>
+
+        
                             </Link>
+                            <div>Items used from list
+                            {recipe.usedIngredients.map(ingredient => (
+                                <div>{ingredient.name}</div>
+                            ))}
+                            </div>
+                            <div>Items needed
+                            {recipe.missedIngredients.map(ingredient => (
+                                <div>{ingredient.name}</div>
+                            ))}
+                            </div>
+                            
                         </div>
-                    ))} */}
+                    ))}
                 </div>
             </div>
         );

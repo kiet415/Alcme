@@ -12,21 +12,18 @@ class NavBar extends React.Component {
       e.preventDefault();
       this.props.logout();
   }
-
-  // Selectively render links dependent on whether the user is logged in
   getLinks() {
       if (this.props.loggedIn) {
         return (
             <div>
-                <Link to={'/profile'}>Profile</Link>
-                <button onClick={this.logoutUser}>Logout</button>
+                <button onClick={this.logoutUser} className="logout-button">Logout</button>
             </div>
         );
       } else {
         return (
             <div>
-                <Link to={'/signup'}>Signup</Link>
-                <Link to={'/login'}>Login</Link>
+                <Link to={'/signup'} className="signup-button">Signup</Link>
+                <Link to={'/login'} className="login-button">Login</Link>
             </div>
         );
       }
@@ -34,8 +31,7 @@ class NavBar extends React.Component {
 
   render() {
       return (
-        <div>
-            <h1>NAV BAR HERE</h1>
+        <div className="navbar-head">
             { this.getLinks() }
         </div>
       );

@@ -26,6 +26,7 @@ class IngredientShow extends React.Component {
                       })
                   }
             </ul>
+
             <div className="ingredient-pie-chart"> 
                 <Chart 
                     width={'400px'}
