@@ -51,7 +51,10 @@ table {
     font-size: 24px;
     flex-wrap: wrap;
 }
-
+.index-home h1{
+    text-align: center;
+    
+}
 .index-div {
     padding: 10px;
     margin-right: 10px;
@@ -90,7 +93,7 @@ table {
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: -32px;
-    
+    height: fit-content;
 }
 
 .signup-button {
@@ -192,10 +195,10 @@ table {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
 }
 
-.index-home {
-    display: flex;
+.index-ingredient img {
+    width: 200px;
+    height: 200px;
 }
-
 
 .selected-ingredients {
     padding: 10px;
@@ -209,14 +212,17 @@ table {
     width: 30%;
     top: 0;
     position: sticky;
-    height: 500px;
+    height: fit-content;
+    
 }
 .ingredient-list-component {
+    display: flex;
+    
     margin-left: 20px;
     color: rgb(36, 36, 36);
     text-shadow: black;
     text-align: center;
-    width: 70%;
+    
 }
 
 .ingredient-name {
@@ -262,6 +268,7 @@ table {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    
 }
 
 .create-recipe-lists {
