@@ -69,7 +69,7 @@ class IngredientIndex extends React.Component {
                   ))}
                 </div>
           </div>
-            <button onClick={this.handleSubmit}>Click to Search for Recipes</button>
+            <button className="selected-ingredients-button" onClick={this.handleSubmit}>Click to Search for Recipes</button>
         </div>
       </div>
     );
