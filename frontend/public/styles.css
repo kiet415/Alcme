@@ -253,6 +253,18 @@ table {
     height: fit-content;
     
 }
+
+.selected-ingredients-button {
+    background: lightgrey;
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
+    border-radius: 5%;
+    font-family: monospace;
+}
 .ingredient-list-component {
     display: flex;
     
