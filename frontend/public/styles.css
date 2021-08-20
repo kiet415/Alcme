@@ -427,10 +427,6 @@ align-items: center;
     transform: translate(-50%, -50%);
     text-align: center;
     align-items: center;
-    /* border: 1px solid lightgrey;
-    color: rgb(46, 46, 46);
-    background: lightgrey;
-    box-shadow: black 2px 2px 2px 2px; */
 }
 
 .filtered-recipes {
