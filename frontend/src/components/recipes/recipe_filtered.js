@@ -15,24 +15,29 @@ class RecipeFiltered extends React.Component {
         
         return (
             <div>
-                Recipe Filtered Page
-                <div>
+                <h1 className="recipe-index-title">Recipes with your ingredients</h1>
+                <div className="recipe-column-div">
                     {recipes.map((recipe,index) => (
                         <div className="filtered-recipes"key={index}>
-                            <Link  to={`/recipe/${recipe.id}`}>
+                            <Link to={`/recipe/${recipe.id}`} className="filtered-left">
                                 <div>{recipe.title}</div>
-                                <div><img src={recipe.image}/></div>
+                                <br/>
+                                <div className= "filt-rec-img"><img src={recipe.image}/></div>
 
         
                             </Link>
-                            <div>Items used from list
+                            <div className="filtered-middle">Items used from list:
                             {recipe.usedIngredients.map(ingredient => (
-                                <div>{ingredient.name}</div>
+                                <ul className="filtered-list-items">
+                                    <li>{ingredient.name}</li>
+                                </ul>
                             ))}
                             </div>
-                            <div>Items needed
+                            <div className="filtered-right">Items needed:
                             {recipe.missedIngredients.map(ingredient => (
-                                <div>{ingredient.name}</div>
+                                <ul className="filtered-list-items">
+                                    <li>{ingredient.name}</li>
+                                </ul>
                             ))}
                             </div>
                             
