@@ -52,9 +52,11 @@ class IngredientIndex extends React.Component {
                 <div className="index-div" key={index}>
                   <li className="index-ingredient" key={index} onClick={((e) => this.handleClick(e))} key={index}>
                     <div className="ingredient-name">{ingredient['name']}</div>
-                    <img src={ingredient.imageUrl}/>
+                    <br/>
+                    <div className=".ingredient-index-image-div">
+                      <img src={ingredient.imageUrl} className="ingredient-index-image"/>
+                    </div>
                   </li>
-                  <br/>
                   <IngredientIndexItem 
                      id={index} ingId={ingredient.id}
                   />
@@ -67,10 +69,9 @@ class IngredientIndex extends React.Component {
               {this.state.ingredients.map(ingredient => (
                 <div>{ingredient} </div>
               ))}
-              <button onClick={this.handleSubmit}>Click to Search for Recipes</button>
+              <button onClick={this.handleSubmit} className="selected-ingredients-button">Click to Search for Recipes</button>
             </div>
-          </div>
-            <button className="selected-ingredients-button" onClick={this.handleSubmit}>Click to Search for Recipes</button>
+          </div >
         </div>
       </div>
     );

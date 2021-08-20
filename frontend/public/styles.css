@@ -213,11 +213,13 @@ div.root-home {
 .index-ingredient img {
     width: 200px;
     height: 200px;
+    background-color: white;
 }
 
 .selected-ingredients {
     padding: 10px;
     margin-right: 20px;
+    padding: 2px 6px 2px 6px;
     border: 1px solid lightgrey;
     color: rgb(46, 46, 46);
     background: lightgrey;
@@ -228,32 +230,46 @@ div.root-home {
     top: 20px;;
     position: sticky;
     height: fit-content;
-    
 }
 
 .selected-ingredients-button {
-    background: lightgrey;
+    background: rgb(238, 238, 238);
     border: 1px solid lightgrey;
     color: rgb(46, 46, 46);
-    background: lightgrey;
-    box-shadow: black 2px 2px 2px 2px;
+    box-shadow: black 4px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
     border-radius: 5%;
     font-family: monospace;
+    margin-bottom: 10px;
 }
+
+.selected-ingredients-button:active{
+    transform: scale(0.98);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
+}
+
 .ingredient-list-component {
     display: flex;
-    
     margin-left: 20px;
     color: rgb(36, 36, 36);
     text-shadow: black;
     text-align: center;
-    
+}
+
+.ingredient-index-image-div {
+
+}
+
+.ingredient-index-image {
+    height:180px;
+    width:180px;
 }
 
 .ingredient-name {
-    height: 40px
+    height: 60px;
+    width: 200px;
+    text-align: center;
 }
 
 .main-window {
@@ -263,6 +279,9 @@ div.root-home {
 
 .item-name {
     text-decoration: none;
+    font-family: monospace;
+    color:rgb(46, 46, 46);
+    text-shadow: black;
 }
 .nutrition-data {
     color:rgb(46, 46, 46);
@@ -391,11 +410,11 @@ div.root-home {
     text-shadow: black;
 }
 
-.recipe-column-div {
+.recipe-row-div {
 display: flex;
 flex-wrap: wrap;
-margin: 2%;
-/* align-items: center; */
+margin: 10px;
+width: 2000px;
 }
 
 .recipe-show-page {
@@ -423,13 +442,14 @@ margin: 2%;
 
 .filtered-left {
     display: flex;
-    width: 40%;
+    width: 33%;
     flex-wrap: wrap;
     text-decoration: none;
     text-align: center;
     color: rgb(46, 46, 46);
     text-shadow: black;
     align-items: center;
+    border: 1px solid black;
 }
 
 .filtered-list-items {
@@ -439,28 +459,33 @@ margin: 2%;
 .filtered-rec-img {
     width: 320px;
     height: 320px;
-    align-items: center;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: auto;
 }
 
 .filtered-middle {
     display: flex;
-    width:30%;
+    width:33%;
     flex-wrap: wrap;
     text-decoration: none;
     text-align: center;
     color: rgb(46, 46, 46);
     text-shadow: black;
+    border: 1px solid black;
 }
 
 .filtered-right {
     display: flex;
-    width:30%;
+    width:33%;
     flex-wrap: wrap;
     text-decoration: none;
     text-align: center;
     color: rgb(46, 46, 46);
     text-shadow: black;
+    border: 1px solid black;
 }
 
 
