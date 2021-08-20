@@ -1,4 +1,4 @@
-import { RECEIVE_RECIPES, RECEIVE_RECIPE, RECEIVE_NEW_RECIPE } from "../actions/recipe_actions";
+import { RECEIVE_RECIPES, RECEIVE_RECIPE, RECEIVE_NEW_RECIPE, DELETE_RECIPE } from "../actions/recipe_actions";
 
 const RecipeReducer = (state = {}, action) => {
     Object.freeze(state)
@@ -13,6 +13,8 @@ const RecipeReducer = (state = {}, action) => {
         case RECEIVE_NEW_RECIPE:
             newState.new = action.recipe.data
             return newState;
+        case DELETE_RECIPE:
+            return null;
         default:
             return state;
     }

@@ -19,22 +19,23 @@ class RecipeIndex extends React.Component {
                     {this.props.recipes.map((recipe,index) => (
                         <div key={index} className="recipe-box">
                             {(recipe.user_id) ? 
-                                <Link to={`recipe/${recipe._id}`} className="recipe-box-title">
+                                <Link to={`recipe/${recipe['_id']}`} className="recipe-box-title">
                                     <div className="recipe-title">
                                         {recipe.title}
                                     </div>
-                                    <br/>
-                                    <br/>
-                                    <img src={recipe.image}/>
+                                    <div>
+                                        <img src={recipe.image}/>
+                                    </div>
+                                    
                                 </Link>
                                 :
                                 <Link to={`recipe/${recipe.id}`} className="recipe-box-title">
                                     <div className="recipe-title">
                                         {recipe.title}
                                     </div>
-                                    <br/>
-                                    <br/>
-                                    <img src={recipe.image}/>
+                                    <div>
+                                        <img src={recipe.image}/>
+                                    </div>
                                 </Link>
                             }
                             

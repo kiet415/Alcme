@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-size: 24px;
+    font-family: monospace;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.index-ul {
+    display: flex;
+    font-size: 24px;
+    flex-wrap: wrap;
+}
+.index-home h1{
+    text-align: center;
+    
+}
+.index-div {
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-decoration: none;
+    width: 200px;
+}
+.ingredient-title {
+    text-align: center;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+
+}
+.ingredient-show-page {
+    font-size: 24px;
+    padding: 20px;
+    
+}
+.ingredient-show-container {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+div.root-home {
+    background-image: url("https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* background: url("https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center fixed;  */
+    min-height: 110vh;
+    width: 100vw;
+    top: 0;
+    
+}
+
+.signup-button {
+    border-radius: 15%;
+    background-color: lightgrey;
+    text-decoration: none;
+    color:rgb(46, 46, 46);
+    padding: 2px 6px 4px 6px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    border-radius: 10%;
+    box-shadow: black 4px 2px 2px 2px;
+    text-shadow: black;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+
+.signup-button:active{
+    transform: scale(0.98);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.login-button {
+    border-radius: 15%;
+    background-color: lightgrey;
+    text-decoration: none;
+    color:rgb(46, 46, 46);
+    padding: 2px 6px 4px 6px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    border-radius: 10%;
+    box-shadow: black 4px 2px 2px 2px;
+    text-shadow: black;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+.login-button:active{
+    transform: scale(0.98);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.navbar-head {
+    width: 98%;
+}
+
+.login-button,.signup-button {
+    float: right;
+}
+
+.authpage {
+    padding: 10px;
+    margin: auto;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+.authbutton {
+    background: lightgrey;
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
+    border-radius: 5%;
+    font-family: monospace;
+}
+
+.authbutton:active{
+    transform: scale(0.98);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.logout-button {
+    border-radius: 15%;
+    background-color: lightgrey;
+    text-decoration: none;
+    color:rgb(46, 46, 46);
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    border-radius: 10%;
+    box-shadow: black 4px 2px 2px 2px;
+    text-shadow: black;
+    margin-left: 8px;
+    margin-top: 40px;
+}
+
+.logout-button:active{
+    transform: scale(0.98);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.ingredient-index-button {
+    background-color: lightgrey;
+    text-decoration: none;
+    color:rgb(46, 46, 46);
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    border-radius: 5%;
+    box-shadow: black 4px 2px 2px 2px;
+    text-shadow: black;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.ingredient-index-button:active{
+    transform: scale(0.98);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.index-ingredient img {
+    width: 200px;
+    height: 200px;
+}
+
+.selected-ingredients {
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
+    width: 30%;
+    top: 20px;;
+    position: sticky;
+    height: fit-content;
+    
+}
+
+.selected-ingredients-button {
+    background: lightgrey;
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
+    border-radius: 5%;
+    font-family: monospace;
+}
+.ingredient-list-component {
+    display: flex;
+    
+    margin-left: 20px;
+    color: rgb(36, 36, 36);
+    text-shadow: black;
+    text-align: center;
+    
+}
+
+.ingredient-name {
+    height: 40px
+}
+
+.main-window {
+    
+    color: rgb(36, 36, 36);
+}
+
+.item-name {
+    text-decoration: none;
+}
+.nutrition-data {
+    color:rgb(46, 46, 46);
+    text-shadow: black;
+}
+
+.ingredient-nutrition {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
+}
+
+.ingredient-pie-chart {
+    background: lightgrey;
+}
+
+.recipe-create-page {
+    padding: 10px;
+    margin: auto;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.create-recipe-lists {
+    display: flex;
+}
+
+.create-recipe-ingredients-list {
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
+    width: 400px;
+    margin-right: 50px;
+}
+
+.buttons-logged-in {
+    justify-content: space-between;
+}
+
+.create-recipe-directions-list {
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
+    width: 400px;
+}
+
+.input {
+    background: lightgrey;
+}
+
+.form-dir {
+    font-weight: bold;
+}
+
+.ins-btn {
+    background: lightgrey;
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.rec-btn {
+    background: lightgrey;
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.form-btns {
+
+}
+
+.recipe-box {
+    padding: 10px;
+    border: 1px solid lightgrey;
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-align: center;
+    align-items: center;
+    width: 320px;
+    height: 320px;
+    margin: 10px;
+}
+
+.recipe-box-title {
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+}
+
+.recipe-box-title img{
+    width: 270px;
+    height: 250px;
+}
+
+.recipe-title {
+    height: 20px;
+}
+
+.recipe-index-title {
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+    text-align: center;
+    text-shadow: black;
+}
+
+.recipe-column-div {
+display: flex;
+flex-wrap: wrap;
+margin: 2%;
+/* align-items: center; */
+}
+
+.recipe-show-page {
+    padding: 10px;
+    margin: auto;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-items: center;
+}
+.filtered-recipes {
+    display: flex;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    height: 320px;
+    margin: 10px;
+}
+
+.filtered-left {
+    display: flex;
+    width: 40%;
+    flex-wrap: wrap;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+    align-items: center;
+}
+
+.filtered-list-items {
+    text-align: center;
+}
+
+.filtered-rec-img {
+    width: 320px;
+    height: 320px;
+    align-items: center;
+    text-align: center;
+}
+
+.filtered-middle {
+    display: flex;
+    width:30%;
+    flex-wrap: wrap;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+}
+
+.filtered-right {
+    display: flex;
+    width:30%;
+    flex-wrap: wrap;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+}
+
+
+/* Joshua */
+div div svg rect{
+    fill:rgba(0, 0, 0, 0)
+}
+svg g {
+    font-family: monospace;
+}
+div.ingredient-pie-chart{
+    
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
+}
+
+
+.recipe-show-box {
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px 20px 50px;
+}
+.recipe-show-title {
+    display: flex;
+    flex-direction: column;
+}
+.recipe-show-ingredients{
+    padding-right: 100px
+}
+.recipe-show-ingredients-title {
+    font-size: 52px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+.recipe-show-ingredients-name {
+    padding-top: 20px;
+    font-size: 32px;
+    text-align: center;
+}
+.recipe-show-title h1 {
+    width: 800px;
+    text-align: center;
+}
+.recipe-show-instructions {
+    padding-left: 100px;
+    width: 40%;
+    
+}
+.recipe-show-instructions-list {
+    font-size: 32px;
+
+}
+.recipe-show-instructions-title {
+    font-size: 52px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.recipe-show-instructions-list {
+    padding-top: 20px;
+    
+}
+.h-title {
+    text-align: center;
+}
+.recipe-show-title img {
+    width: 800px;
+    height: 600px;
+}
+.recipe-image {
+    align-self: center;
+    margin-left: 30%;
+    width: 50%;
+}

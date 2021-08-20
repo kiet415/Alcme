@@ -23,16 +23,8 @@ export const getRecipesByIngredients = (ingredients) => {
 export const getRecipeInfo = id => {
     return axios.get(`/api/spoon/recipeinfo/${id}`)
 }
-// router.get('/recipeinfo/:id', (req, res) => {
 
-//     api_helper.make_API_call(
-//       path + `/recipes/informationBulk?ids=${req.params.id}`
-//         + `&includeNutritioin=true&` + spkey)
-//           .then(response => {
-//             res.json(response)
-//               })
-//             .catch(err => 
-//               res.status(404)
-//                 );
-//   });
+export const deleteRecipe = id => {
+    return axios.get(`/api/spoon/delete/${id}`)
+}
 

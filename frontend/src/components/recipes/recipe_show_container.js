@@ -1,16 +1,20 @@
+import { STATES } from 'mongoose';
 import { connect } from 'react-redux';
-import { fetchRecipe, fetchRecipeInfo } from '../../actions/recipe_actions';
+import { fetchRecipe, fetchRecipeInfo, removeRecipe } from '../../actions/recipe_actions';
 import RecipeShow from './recipe_show';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = state => {
+    console.log(state)
     return {
-        recipe: state.recipes
+        recipe: state.recipes,
+        user: state.session.user
     };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
     fetchRecipeInfo: () => dispatch(fetchRecipeInfo(ownProps.match.params.id)),
     fetchRecipe: () => dispatch(fetchRecipe(ownProps.match.params.id)),
+    removeRecipe: (id) => dispatch(removeRecipe(id)),
     
 });
 
