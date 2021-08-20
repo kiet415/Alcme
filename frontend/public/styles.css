@@ -247,9 +247,6 @@ div.root-home {
 
 }
 
-.ingredient-index-image-div {
-
-}
 
 .ingredient-index-image {
     height:180px;
@@ -257,7 +254,7 @@ div.root-home {
 }
 
 .ingredient-name {
-    height: 40px
+    height: 40px;
     height: 60px;
     width: 200px;
     text-align: center;
@@ -383,15 +380,21 @@ div.root-home {
     text-align: center;
     text-shadow: black;
 }
-
+.recipe-box-title img {
+    width: 250px;
+    height: 250px;
+}
 .recipe-column-div {
-.recipe-row-div {
-display: flex;
-flex-wrap: wrap;
-margin: 2%;
-/* align-items: center; */
-margin: 10px;
-width: 2000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+    /* align-items: center; */
+    margin: 10px;
+    align-content: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right:20px;
+
 }
 
 .recipe-show-page {
@@ -486,4 +489,61 @@ div.ingredient-pie-chart{
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
+}
+
+
+.recipe-show-box {
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px 20px 50px;
+}
+.recipe-show-title {
+    display: flex;
+    flex-direction: column;
+}
+.recipe-show-ingredients{
+    padding-right: 100px
+}
+.recipe-show-ingredients-title {
+    font-size: 52px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+.recipe-show-ingredients-name {
+    padding-top: 20px;
+    font-size: 32px;
+    text-align: center;
+}
+.recipe-show-title h1 {
+    width: 800px;
+    text-align: center;
+}
+.recipe-show-instructions {
+    padding-left: 100px;
+    width: 40%;
+}
+.recipe-show-instructions-list {
+    font-size: 32px;
+}
+.recipe-show-instructions-title {
+    font-size: 52px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+.recipe-show-instructions-list {
+    padding-top: 20px;
+}
+.h-title {
+    text-align: center;
+}
+.recipe-show-title img {
+    width: 800px;
+    height: 600px;
+}
+.recipe-image {
+    align-self: center;
+    margin-left: 30%;
+    width: 50%;
 }
