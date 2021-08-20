@@ -383,12 +383,14 @@ div.root-home {
     text-shadow: black;
     text-align: center;
     text-shadow: black;
+    padding-bottom: 30px;
 }
 .recipe-box-title img {
     width: 250px;
     height: 250px;
 }
 .recipe-column-div {
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     margin: 2%;
