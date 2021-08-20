@@ -95,7 +95,6 @@ table {
     height: 100vh;
     width: 100vw;
     
-    margin-top: -32px;
     height: fit-content;
 
 }
@@ -336,6 +335,10 @@ table {
     margin-right: 50px;
 }
 
+.buttons-logged-in {
+    justify-content: space-between;
+}
+
 .create-recipe-directions-list {
     border: 1px solid lightgrey;
     color: rgb(46, 46, 46);
@@ -412,7 +415,7 @@ table {
 display: flex;
 flex-wrap: wrap;
 margin: 2%;
-align-items: center;
+/* align-items: center; */
 }
 
 .recipe-show-page {
@@ -435,4 +438,52 @@ align-items: center;
 
 .filtered-recipes {
     display: flex;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    height: 320px;
+    margin: 10px;
+}
+
+.filtered-left {
+    display: flex;
+    width: 40%;
+    flex-wrap: wrap;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+    align-items: center;
+}
+
+.filtered-list-items {
+    text-align: center;
+}
+
+.filtered-rec-img {
+    width: 320px;
+    height: 320px;
+    align-items: center;
+    text-align: center;
+}
+
+.filtered-middle {
+    display: flex;
+    width:30%;
+    flex-wrap: wrap;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+}
+
+.filtered-right {
+    display: flex;
+    width:30%;
+    flex-wrap: wrap;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
 }
