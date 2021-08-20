@@ -40,7 +40,6 @@ class IngredientIndex extends React.Component {
   render() {
     if(this.props.ingredients[0] === undefined) return null;
     // let imgUrl = "https://spoonacular.com/cdn/ingredients_500x500/"
-    console.log(this.props)
     return (
       <div className="main-window">
         <div className="index-home"> 

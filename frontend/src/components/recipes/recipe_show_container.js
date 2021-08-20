@@ -4,7 +4,6 @@ import { fetchRecipe, fetchRecipeInfo, removeRecipe } from '../../actions/recipe
 import RecipeShow from './recipe_show';
 
 const mapStateToProps = state => {
-    console.log(state)
     return {
         recipe: state.recipes,
         user: state.session.user
