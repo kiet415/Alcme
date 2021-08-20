@@ -27,16 +27,18 @@ class RecipeCreate extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        
         const recipe = {
-            title: this.state.title,
-            img: this.state.img,
-            ingredients: this.state.finishedIngredients,
-            instruction: this.state.finishedInstructions,
-            user_id: 1, 
+            recipe: {
+                title: this.state.title,
+                image: this.state.img,
+                ingredients: this.state.finishedIngredients,
+                instructions: this.state.finishedInstructions,
+                user_id: this.props.user.id
+            }
         }
         this.props.createRecipe(recipe);
-        console.log(recipe)
-        //this.props.history.push(`/recipes`)
+        this.props.history.push(`/recipes`)
     }
 
     update(field, e) {
@@ -55,8 +57,8 @@ class RecipeCreate extends React.Component {
                                 <label>Title </label>
                                 <input
                                     type="text"
-                                    value={this.state.img}
-                                    onChange={(e) => this.update("img", e)}
+                                    value={this.state.title}
+                                    onChange={(e) => this.update("title", e)}
                                     className="input"
                                 />
                                 <br/>
@@ -64,8 +66,8 @@ class RecipeCreate extends React.Component {
                                 <label>Image URL: </label>
                                 <input
                                     type="text"
-                                    value={this.state.title}
-                                    onChange={(e) => this.update("title", e)}
+                                    value={this.state.img}
+                                    onChange={(e) => this.update("img", e)}
                                     className="input"
                                     placeholder="optional"
                                 />

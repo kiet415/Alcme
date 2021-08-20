@@ -21,11 +21,11 @@ const RecipeSchema = new Schema ({
         type: Array
     },
     instructions: {
-        type: String
+        type: Array
     },
     cuisines: Array,
     user_id: {
-        type: Number
+        type: String
     }
 });
   

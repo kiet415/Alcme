@@ -3,9 +3,8 @@ import { createRecipe } from '../../actions/recipe_actions';
 import RecipeCreate from './recipe_create';
 
 const mapStateToProps = state => {
-    console.log(state)
     return {
-        
+        user: state.session.user
     }
 }
 

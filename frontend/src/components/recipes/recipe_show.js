@@ -3,25 +3,36 @@ import React from 'react';
 class RecipeShow extends React.Component {
     constructor(props) {
         super(props);
+        
     }
     componentDidMount() {
-        this.props.fetchRecipeInfo();
+        if(this.props.match.params.id.length > 10) {
+            this.props.fetchRecipe();
+        } else {
+            this.props.fetchRecipeInfo();
+        }
     }
+    
     render() {
         if(!this.props.recipe) return null;
-        console.log(this.props)
-        let recipe = this.props.recipe.all[0]
+        let recipe = "42342342";
+        if(this.props.match.params.id.length > 10) {
+            recipe = this.props.recipe.all
+        } else {
+            recipe = this.props.recipe.all[0]
+        }
         console.log(recipe)
+        
         return (
             <div className="recipe-show-page">
-                {this.props.recipe.title}
-            <br/>
-            <br/>
-                <img src={recipe.image}/>
+                {recipe.title}
+                {recipe.image ? 
+                    <div><img src={recipe.image}/></div>
+                    : null}
 
                 <div> 
                     Instructions
-                    {recipe.instructions}
+                    <div>{recipe.instructions}</div>
                 </div>
             </div>
         );
