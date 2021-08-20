@@ -16,7 +16,7 @@ class RecipeFiltered extends React.Component {
         return (
             <div>
                 <h1 className="recipe-index-title">Recipes with your ingredients</h1>
-                <div className="recipe-column-div">
+                <div className="recipe-row-div">
                     {recipes.map((recipe,index) => (
                         <div className="filtered-recipes"key={index}>
                             <Link to={`/recipe/${recipe.id}`} className="filtered-left">
