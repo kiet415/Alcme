@@ -56,27 +56,32 @@ class SignupForm extends React.Component {
     return (
       <div className="authpage">
         <form onSubmit={this.handleSubmit}>
+          <h1>Sign Up</h1>
           <div className="signup-form">
             <br/>
               <input type="text"
+                className="input"
                 value={this.state.email}
                 onChange={this.update('email')}
                 placeholder="Email"
               />
             <br/>
               <input type="text"
+                className="input"
                 value={this.state.username}
                 onChange={this.update('username')}
                 placeholder="Username"
               />
             <br/>
               <input type="password"
+                className="input"
                 value={this.state.password}
                 onChange={this.update('password')}
                 placeholder="Password"
               />
             <br/>
               <input type="password"
+                className="input"
                 value={this.state.password2}
                 onChange={this.update('password2')}
                 placeholder="Confirm Password"

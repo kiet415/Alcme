@@ -167,6 +167,7 @@ div.root-home {
     text-align: center;
     border-radius: 5%;
     font-family: monospace;
+    width: 200px;
 }
 .authbutton:active{
     transform: scale(0.98);
@@ -330,6 +331,9 @@ div.root-home {
 }
 .input {
     background: lightgrey;
+    width: 200px;
+    height: 20px;
+    font-size: 14px;
 }
 .form-dir {
     font-weight: bold;
