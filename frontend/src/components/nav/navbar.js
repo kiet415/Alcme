@@ -15,19 +15,20 @@ class NavBar extends React.Component {
   getLinks() {
       if (this.props.loggedIn) {
         return (
-            <div className="buttons-logged-in">
-                <Link to="/recipe/create" className="ingredient-index-button">Create Recipe</Link>
-            <Link to="/recipes" className="ingredient-index-button">Recipe index page</Link>
-                <button onClick={this.logoutUser} className="logout-button">Logout</button>
+            <div className="buttons-top-right">
+                <button onClick={this.logoutUser} className="logout-login">Logout</button>
+                <br/>
+                <Link to="/recipe/create" className="ingredient-signup">Create Recipe</Link>
+                <Link to="/recipes" className="ingredient-index-button">All Recipes</Link>
             </div>
         );
       } else {
         return (
-            <div>
+            <div className="buttons-top-right">
+              <Link to={'/login'} className="logout-login">Login</Link>
               <br/>
-              <Link to="/recipes" className="ingredient-index-button">Recipe index page</Link>
-              <Link to={'/signup'} className="signup-button">Signup</Link>
-              <Link to={'/login'} className="login-button">Login</Link>
+              <Link to={'/signup'} className="ingredient-signup">Signup</Link>
+              <Link to="/recipes" className="ingredient-index-button">All Recipes</Link>
             </div>
         );
       }
@@ -36,7 +37,7 @@ class NavBar extends React.Component {
   render() {
       return (
         <div className="navbar-head">
-              <a href="http://localhost:3000/#/">
+              <a href="http://localhost:3000/#/" className="logo">
                 <img src="ALcme.png"></img>
               </a>
             { this.getLinks() }
