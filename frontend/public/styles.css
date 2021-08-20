@@ -400,6 +400,11 @@ table {
     color: rgb(46, 46, 46);
 }
 
+.recipe-box-title img{
+    width: 270px;
+    height: 250px;
+}
+
 .recipe-title {
     height: 20px;
 }
