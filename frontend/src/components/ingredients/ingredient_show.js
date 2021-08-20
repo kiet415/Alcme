@@ -10,14 +10,19 @@ class IngredientShow extends React.Component {
     if(!ingredient) return null;
     return (
       <div className="ingredient-show-page">
-        {console.log(this.props.ingredient.nutrition)}
-        <h1 className="ingredient-title">{this.props.ingredient.name}</h1>
+        <h1 className="ingredient-title">
+          {this.props.ingredient.name}
+        </h1>
         <div className="ingredient-show-container">
-
             <ul className="ingredient-nutrition">
                 <h3>Nutrition</h3>
-                  {this.props.ingredient.nutrition.nutrients
+                  {
+                  this.props.ingredient.nutrition.nutrients
                   .map( nutrient => {
+                    if (
+                      'Phosphorus Copper Selenium Folate Manganese Magnesium'
+                        .includes(nutrient.title)
+                      ) return null
                     return (
                       <li>
                         {nutrient.name} : {nutrient.amount}{nutrient.unit}
@@ -38,10 +43,9 @@ class IngredientShow extends React.Component {
                         ['Protein', this.props.ingredient.nutrition.caloricBreakdown.percentProtein],
                       ['Fat', this.props.ingredient.nutrition.caloricBreakdown.percentFat],
                       ['Carbs', this.props.ingredient.nutrition.caloricBreakdown.percentCarbs]
-                        
                     ]}
                     options={{
-                        title: 'Caloric Breakdown',
+                        // title: 'Caloric Breakdown',
                         // Just add this option
                         is3D: true,
                     }}
