@@ -8,6 +8,7 @@ class RecipeIndex extends React.Component {
         this.props.fetchRecipes();
     }
     render() {
+        
         if(this.props.recipes === undefined) return null;
         console.log(this.props)
         return (
@@ -17,14 +18,26 @@ class RecipeIndex extends React.Component {
                 <div className="recipe-column-div">
                     {this.props.recipes.map((recipe,index) => (
                         <div key={index} className="recipe-box">
-                            <Link to={`recipe/${recipe.id}`} className="recipe-box-title">
-                                <div className="recipe-title">
-                                    {recipe.title}
-                                </div>
-                                <br/>
-                                <br/>
-                                <img src={recipe.image}/>
-                            </Link>
+                            {(recipe.user_id) ? 
+                                <Link to={`recipe/${recipe._id}`} className="recipe-box-title">
+                                    <div className="recipe-title">
+                                        {recipe.title}
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    <img src={recipe.image}/>
+                                </Link>
+                                :
+                                <Link to={`recipe/${recipe.id}`} className="recipe-box-title">
+                                    <div className="recipe-title">
+                                        {recipe.title}
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    <img src={recipe.image}/>
+                                </Link>
+                            }
+                            
                         </div>
                     ))}
                 </div>

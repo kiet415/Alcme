@@ -17,6 +17,7 @@ class NavBar extends React.Component {
         return (
             <div className="buttons-logged-in">
                 <Link to="/recipe/create" className="ingredient-index-button">Create Recipe</Link>
+                <Link to="/recipes" className="ingredient-index-button">Recipe Index</Link>
                 <button onClick={this.logoutUser} className="logout-button">Logout</button>
             </div>
         );
