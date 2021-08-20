@@ -85,19 +85,16 @@ table {
     
 }
 
-.root-home {
+div.root-home {
     background-image: url("https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 
     /* background: url("https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center fixed;  */
-    height: 100vh;
+    min-height: 110vh;
     width: 100vw;
     
-    margin-top: -32px;
-    height: fit-content;
-
 }
 
 .signup-button {
@@ -240,7 +237,7 @@ table {
 
 .selected-ingredients {
     padding: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
     border: 1px solid lightgrey;
     color: rgb(46, 46, 46);
     background: lightgrey;
@@ -248,7 +245,7 @@ table {
     text-shadow: black;
     text-align: center;
     width: 30%;
-    top: 0;
+    top: 20px;;
     position: sticky;
     height: fit-content;
     
@@ -432,7 +429,26 @@ align-items: center;
     background: lightgrey;
     box-shadow: black 2px 2px 2px 2px; */
 }
-
 .filtered-recipes {
     display: flex;
+}
+
+
+/* Joshua */
+div div svg rect{
+    fill:rgba(0, 0, 0, 0)
+}
+svg g {
+    font-family: monospace;
+}
+div.ingredient-pie-chart{
+    
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid lightgrey;
+    color: rgb(46, 46, 46);
+    background: lightgrey;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+    text-align: center;
 }
