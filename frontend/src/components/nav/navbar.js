@@ -17,7 +17,6 @@ class NavBar extends React.Component {
         return (
             <div className="buttons-top-right">
                 <button onClick={this.logoutUser} className="logout-login">Logout</button>
-                <br/>
                 <Link to="/recipe/create" className="ingredient-signup">Create Recipe</Link>
                 <Link to="/recipes" className="ingredient-index-button">All Recipes</Link>
             </div>
@@ -26,7 +25,6 @@ class NavBar extends React.Component {
         return (
             <div className="buttons-top-right">
               <Link to={'/login'} className="logout-login">Login</Link>
-              <br/>
               <Link to={'/signup'} className="ingredient-signup">Signup</Link>
               <Link to="/recipes" className="ingredient-index-button">All Recipes</Link>
             </div>
