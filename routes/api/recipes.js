@@ -38,17 +38,15 @@ router.post('/create', (req, res) => {
          res.status(401).json(error))
 })
 
-router.post('/delete/:id', (req,res) => {
-  Recipe.findByIdAndDelete(req.params.id)
-    .then(response => {
-      if (Recipe.findById(req.params.id)) {
-    res.json({err: 'Recipe not deleted'})
-    } else {
-       res.status(200)
-    }
-  })
-})
+router.delete('/delete/:id', (req, res) => {
 
+  Recipe.findByIdAndRemove(req.params.id)
+    .then(docs => {
+      res.status(200).send(
+        docs._id
+      ).catch(err => res.status(400))
+    })
+})  
 // router.get('/:id', (req, res) => {
 //   Recipe.findById(req.params.id)
 //     .then(recipe =>
