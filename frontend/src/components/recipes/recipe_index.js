@@ -14,7 +14,7 @@ class RecipeIndex extends React.Component {
         return (
             <div>
                 <h1 className="recipe-index-title">All Recipes</h1>
-                <br/>
+                
                 <div className="recipe-column-div">
                     {this.props.recipes.map((recipe,index) => (
                         <div key={index} className="recipe-box">

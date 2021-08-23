@@ -167,6 +167,7 @@ div.root-home {
     text-align: center;
     border-radius: 5%;
     font-family: monospace;
+    width: 200px;
 }
 .authbutton:active{
     transform: scale(0.98);
@@ -330,6 +331,9 @@ div.root-home {
 }
 .input {
     background: lightgrey;
+    width: 200px;
+    height: 20px;
+    font-size: 14px;
 }
 .form-dir {
     font-weight: bold;
@@ -379,12 +383,14 @@ div.root-home {
     text-shadow: black;
     text-align: center;
     text-shadow: black;
+    padding-bottom: 30px;
 }
 .recipe-box-title img {
     width: 250px;
     height: 250px;
 }
 .recipe-column-div {
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     margin: 2%;
@@ -419,9 +425,12 @@ div.root-home {
     height: 320px;
     margin: 10px;
 }
-
+.filt-rec-img img{
+    width: 300px;
+}
 .filtered-left {
     display: flex;
+    flex-direction: column;
     width: 40%;
     width: 33%;
     flex-wrap: wrap;
@@ -431,10 +440,13 @@ div.root-home {
     text-shadow: black;
     align-items: center;
     border: 1px solid black;
+    justify-content: center;
+    align-items: center;
 }
 
 .filtered-list-items {
     text-align: center;
+    padding-top: 20px;
 }
 .filtered-rec-img {
     width: 320px;
@@ -449,6 +461,7 @@ div.root-home {
 
 .filtered-middle {
     display: flex;
+    flex-direction: column;
     width:30%;
     width:33%;
     flex-wrap: wrap;
@@ -457,10 +470,13 @@ div.root-home {
     color: rgb(46, 46, 46);
     text-shadow: black;
     border: 1px solid black;
+    text-align: center;
+    
 }
 
 .filtered-right {
     display: flex;
+    flex-direction:column;
     width:30%;
     width:33%;
     flex-wrap: wrap;
