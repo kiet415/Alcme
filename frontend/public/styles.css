@@ -272,6 +272,7 @@ h3#chart-title {
     border-radius: 5%;
     font-family: monospace;
     margin-bottom: 10px;
+
 }
 
 .selected-ingredients-button:active{
@@ -619,4 +620,8 @@ div.ingredient-pie-chart{
     align-self: center;
     margin-left: 30%;
     width: 50%;
+}
+
+.ingredient-item {
+    padding-top: 10px;
 }
