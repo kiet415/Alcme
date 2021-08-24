@@ -41,11 +41,12 @@ router.post('/create', (req, res) => {
 router.delete('/delete/:id', (req, res) => {
 
   Recipe.findByIdAndRemove(req.params.id)
-    .then(docs => {
-      res.status(200).send(
-        docs._id
-      ).catch(err => res.status(400))
-    })
+    .then( () =>
+      Recipe.find({})
+      .then(recipes => {
+        res.json(recipes)
+      }).catch(err => res.status(400).json(err))
+    )
 })  
 // router.get('/:id', (req, res) => {
 //   Recipe.findById(req.params.id)

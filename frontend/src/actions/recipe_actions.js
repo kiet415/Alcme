@@ -29,6 +29,7 @@ export const removeRecipe = (id) => dispatch => {
         APIUtil.deleteRecipe(id)
             .then(() => dispatch(deleteRecipe()))
             .catch(err => console.log(err))
+            .then(recipes => dispatch(receiveRecipes(recipes)))
     )};
 
 
