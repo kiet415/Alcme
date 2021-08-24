@@ -23,11 +23,23 @@ class RecipeShow extends React.Component {
     handleClick = (id) => {
         this.props.removeRecipe(id);
     }
+    renderEditButton() {
+        if(this.props.user) {
+            if(this.props.user.id === this.props.recipe.all.user_id) {
+                return <button id="edit-recipe">
+                    Edit Recipe
+                </button>
+            }
+        }
+    }
     renderDeleteButton() {
         if(this.props.user) {
             if(this.props.user.id === this.props.recipe.all.user_id) {
                 return(
-                    <button onClick={() => this.handleClick(this.props.recipe.all._id)}>Delete Recipe</button>
+                    <button id="edit-recipe">
+
+                        <a href="/recipes" onClick={() => this.handleClick(this.props.recipe.all._id)}>Delete Recipe</a>
+                    </button>
                 )
             }
         }
@@ -42,8 +54,18 @@ class RecipeShow extends React.Component {
             return (
                 
                 <div>
+                    <div id="recipe-manage">
                     {this.renderDeleteButton()}
-                    <img className="recipe-image" src={this.props.recipe.all.image}/>
+                    {this.renderEditButton()}
+                    </div>
+
+                    { this.props.recipe.all.image ?
+                     
+                     <img className="recipe-image" src={this.props.recipe.all.image} /> :
+                        <div className="recipe-image">
+                            <img src='ALcme.png' width="400px" />
+                        </div>
+                    }
 
                     <h1 className="h-title">{this.props.recipe.all.title}</h1>
                     <div className="recipe-show-box">
