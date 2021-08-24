@@ -347,6 +347,10 @@ h3#chart-title {
 .create-recipe-lists {
     display: flex;
 }
+.recipe-link {
+    text-align: center;
+    padding-bottom: 50px;
+}
 .create-recipe-ingredients-list {
     border: 1px solid lightgrey;
     color: rgb(46, 46, 46);
@@ -419,6 +423,7 @@ h3#chart-title {
 }
 .recipe-title {
     height: 20px;
+    padding-bottom: 50px;
 }
 .recipe-index-title {
     color: rgb(46, 46, 46);
@@ -618,7 +623,7 @@ div.ingredient-pie-chart{
 }
 .recipe-image {
     align-self: center;
-    margin-left: 30%;
+    margin-left: 25%;
     width: 50%;
 }
 

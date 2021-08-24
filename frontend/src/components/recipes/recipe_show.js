@@ -9,12 +9,10 @@ class RecipeShow extends React.Component {
     }
     componentDidMount() {
         if(this.props.match.params.id.length > 10) {
-            console.log('hi')
             this.props.fetchRecipe().then(() => {
                 this.setState({loading: false});
             });
         } else {
-            console.log('bye')
             this.props.fetchRecipeInfo().then(() => {
                 this.setState({loading: false});
             });
@@ -99,12 +97,14 @@ class RecipeShow extends React.Component {
                     <img className="recipe-image" src={this.props.recipe.all[0].image}/>
 
                     <h1 className="h-title">{this.props.recipe.all[0].title}</h1>
+                    <div className="recipe-link"><a  href={this.props.recipe.all[0].spoonacularSourceUrl} >Link to Original Recipe </a></div>
                     <div className="recipe-show-box">
                         <div className="recipe-show-title">
-                            
+                        
                            
                             <div className="recipe-show-ingredients">
                                 <div className="recipe-show-ingredients-title">Ingredients</div>
+                                
                                 {this.props.recipe.all[0].extendedIngredients.map(ingredient => (
                                     <div className="recipe-show-ingredients-name">{ingredient.name}</div>
                                 ))}
@@ -118,6 +118,7 @@ class RecipeShow extends React.Component {
                         
 
                     </div>
+                    
                 </div>
             )
         }
