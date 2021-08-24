@@ -64,11 +64,25 @@ class IngredientIndex extends React.Component {
   
             </ul>
             <div className="selected-ingredients">
-              <h1>Selected Ingredients</h1>
-              {this.state.ingredients.map(ingredient => (
-                <div>{ingredient} </div>
-              ))}
-              <button onClick={this.handleSubmit} className="selected-ingredients-button">Click to Search for Recipes</button>
+
+              <div className="instructions">
+                <h1>Instructions</h1>
+    
+                <div>Simply just click on any of these ingredients and it will be
+                  added to the list. If you want to remove the item, just click on it again.
+                  Once you're done click the "Search for Recipe" button to see your results.
+                </div>
+              </div>
+
+              <div>
+                <h1>Selected Ingredients</h1>
+                {this.state.ingredients.map(ingredient => (
+                  <div>{ingredient} </div>
+                ))}
+                <button onClick={this.handleSubmit} className="selected-ingredients-button">Click to Search for Recipes</button> 
+              </div>
+
+             
             </div>
           </div >
         </div>

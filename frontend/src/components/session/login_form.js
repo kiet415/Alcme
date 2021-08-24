@@ -39,7 +39,14 @@ class LoginForm extends React.Component {
 
     this.props.login(user); 
   }
-
+  demoLogIn = (e) => {
+    e.preventDefault();
+    let demo = {
+      username: "DEMO123",
+      password: "DEMO123",
+    }
+    this.props.login(demo);
+  }
   renderErrors() {
     return(
         <ul>
@@ -58,6 +65,7 @@ class LoginForm extends React.Component {
         
         <form className="authpage"onSubmit={this.handleSubmit}>
         <h1>Log In</h1>
+          <div>{this.renderErrors()}</div>
           <div>
               <input className="input" type="text"
                 value={this.state.username}
@@ -71,9 +79,10 @@ class LoginForm extends React.Component {
                 placeholder="Password"
               />
             <br/>
-            <input className="authbutton"type="submit" value="Submit" />
-            {this.renderErrors()}
+            <input className="authbutton" type="submit" value="Submit" />
+            
           </div>
+          <button className="authbutton" onClick={this.demoLogIn}>Demo Log In</button>
         </form>
       </div>
     );
