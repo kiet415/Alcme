@@ -59,9 +59,9 @@ class RecipeShow extends React.Component {
 
                     { this.props.recipe.all.image ?
                      
-                     <img className="recipe-image" src={this.props.recipe.all.image} /> :
+                     <img className="recipe-image" src={this.props.recipe.all.image} alt="recipe image" /> :
                         <div className="recipe-image">
-                            <img src='ALcme.png' width="400px" />
+                            <img src='ALcme.png' width="400px" alt="logo" />
                         </div>
                     }
 
@@ -94,7 +94,7 @@ class RecipeShow extends React.Component {
         } else {
             return (
                 <div>
-                    <img className="recipe-image" src={this.props.recipe.all[0].image}/>
+                    <img className="recipe-image" src={this.props.recipe.all[0].image} alt="recipe image"/>
 
                     <h1 className="h-title">{this.props.recipe.all[0].title}</h1>
                     <div className="recipe-link"><a  href={this.props.recipe.all[0].spoonacularSourceUrl} >Link to Original Recipe </a></div>
