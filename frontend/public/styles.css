@@ -58,13 +58,13 @@ table {
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 20px;
-    border: 1px solid lightgrey;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-decoration: none;
-    width: 200px;
+    width: 400px;
 }
 .ingredient-title {
     text-align: center;
@@ -108,14 +108,14 @@ div#recipe-manage>button{
 }
 .ingredient-signup {
     border-radius: 15%;
-    background-color: lightgrey;
+    background-color: mintcream;
     text-decoration: none;
     color:rgb(46, 46, 46);
     padding: 2px 6px 4px 6px;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
-    border-left: 1px solid lightgrey;
+    border-top: 1px solid mintcream;
+    border-bottom: 1px solid mintcream;
+    border-right: 1px solid mintcream;
+    border-left: 1px solid mintcream;
     border-radius: 10%;
     box-shadow: black 4px 2px 2px 2px;
     text-shadow: black;
@@ -130,14 +130,11 @@ div#recipe-manage>button{
 }
 .logout-login {
     border-radius: 15%;
-    background-color: lightgrey;
+    background-color: mintcream;
     text-decoration: none;
     color:rgb(46, 46, 46);
     padding: 2px 6px 2px 6px;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;;
-    border-right: 1px solid lightgrey;
-    border-left: 1px solid lightgrey;
+    
     border-radius: 10%;
     box-shadow: black 4px 2px 2px 2px;
     text-shadow: black;
@@ -154,14 +151,14 @@ button#edit-recipe a{
 button#edit-recipe{
     text-decoration: none;
     border-radius: 15%;
-    background-color: lightgrey;
+    background-color: mintcream;
     text-decoration: none;
     color:rgb(46, 46, 46);
     padding: 2px 6px 2px 6px;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;;
-    border-right: 1px solid lightgrey;
-    border-left: 1px solid lightgrey;
+    border-top: 1px solid mintcream;
+    border-bottom: 1px solid mintcream;;
+    border-right: 1px solid mintcream;
+    border-left: 1px solid mintcream;
     border-radius: 10%;
     box-shadow: black 4px 2px 2px 2px;
     text-shadow: black;
@@ -199,10 +196,10 @@ h3#chart-title {
     font-family: monospace;
 }
 .authbutton {
-    background: lightgrey;
-    border: 1px solid lightgrey;
+    background: mintcream;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
@@ -210,19 +207,20 @@ h3#chart-title {
     font-family: monospace;
     width: 200px;
 }
+
 .authbutton:active{
     transform: scale(0.98);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
 }
 .ingredient-index-button {
-    background-color: lightgrey;
+    background-color: mintcream;
     text-decoration: none;
     color:rgb(46, 46, 46);
     padding: 2px 6px 2px 6px;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;;
-    border-right: 1px solid lightgrey;
-    border-left: 1px solid lightgrey;
+    border-top: 1px solid mintcream;
+    border-bottom: 1px solid mintcream;;
+    border-right: 1px solid mintcream;
+    border-left: 1px solid mintcream;
     border-radius: 5%;
     box-shadow: black 4px 2px 2px 2px;
     text-shadow: black;
@@ -236,35 +234,37 @@ h3#chart-title {
     transform: scale(0.98);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
 }
+
 .index-ingredient img {
     width: 200px;
     height: 200px;
-    background-color: white;
+    background-color: mintcream;
+    text-align: center;
 }
 
 .selected-ingredients {
     padding: 10px;
     margin-right: 20px;
     padding: 2px 6px 2px 6px;
-    border: 1px solid lightgrey;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
     width: 30%;
-    top: 20px;;
+    top: 20px;
     position: sticky;
     height: fit-content;
-
+    margin-right: 50px;
 }
 
 .selected-ingredients-button {
-    background: lightgrey;
+    background: mintcream;
     background: rgb(238, 238, 238);
-    border: 1px solid lightgrey;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     box-shadow: black 4px 2px 2px 2px;
     text-shadow: black;
@@ -290,17 +290,16 @@ h3#chart-title {
 
 }
 
-
-.ingredient-index-image {
-    padding-top:30px;
-    height:180px;
-    width:180px;
+.ingredient-index-image-div {
+    padding-top: 30px;
+}
+.ingredient-index-image-div img {
+    height:250px;
+    width:250px;
 }
 
 .ingredient-name {
-    height: 40px;
-    height: 60px;
-    width: 200px;
+    
     text-align: center;
 }
 
@@ -322,15 +321,15 @@ h3#chart-title {
 .ingredient-nutrition {
     padding: 10px;
     margin-right: 10px;
-    border: 1px solid lightgrey;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
 }
 .ingredient-pie-chart {
-    background: lightgrey;
+    background: mintcream;
 }
 .recipe-create-page {
     padding: 10px;
@@ -353,9 +352,9 @@ h3#chart-title {
     padding-bottom: 50px;
 }
 .create-recipe-ingredients-list {
-    border: 1px solid lightgrey;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
@@ -366,18 +365,33 @@ h3#chart-title {
     position: absolute;
     right: 10px;
     text-align: right;
+    
+}
+.buttons-top-right  {
+    background-color: transparent;
+    border: none;
+
+}
+.logout-login a {
+    background: mintcream;
+    text-decoration: none;
+    color: black;
+}
+.all-recipes {
+    background: transparent;
+    border: none;
 }
 .create-recipe-directions-list {
-    border: 1px solid lightgrey;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
     width: 400px;
 }
 .input {
-    background: lightgrey;
+    background: mintcream;
     width: 200px;
     height: 20px;
     font-size: 14px;
@@ -386,20 +400,20 @@ h3#chart-title {
     font-weight: bold;
 }
 .ins-btn {
-    background: lightgrey;
-    border: 1px solid lightgrey;
+    background: mintcream;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
     margin-right: 10px;
 }
 .rec-btn {
-    background: lightgrey;
-    border: 1px solid lightgrey;
+    background: mintcream;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
@@ -409,8 +423,8 @@ h3#chart-title {
 }
 .recipe-box {
     padding: 10px;
-    border: 1px solid lightgrey;
-    background: lightgrey;
+    border: 1px solid mintcream;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-align: center;
     align-items: center;
@@ -467,9 +481,10 @@ h3#chart-title {
 .filtered-recipes {
     display: flex;
     padding: 10px;
-    border: 1px solid lightgrey;
-    background: lightgrey;
+    border: 1px solid mintcream;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
+    
     height: 320px;
     margin: 10px;
 }
@@ -549,9 +564,9 @@ div#ing-show-frame{
     padding: 10px;
     margin-right:auto;
     margin-left:auto;
-    border: 1px solid lightgrey;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
@@ -563,9 +578,9 @@ div.ingredient-pie-chart{
     outline: 1px solid black;
     padding: 10px;
     margin-right: 10px;
-    border: 1px solid lightgrey;
+    border: 1px solid mintcream;
     color: rgb(46, 46, 46);
-    background: lightgrey;
+    background: mintcream;
     box-shadow: black 2px 2px 2px 2px;
     text-shadow: black;
     text-align: center;
@@ -630,4 +645,10 @@ div.ingredient-pie-chart{
 
 .ingredient-item {
     padding-top: 10px;
+}
+h1 {
+    color: black;
+}
+.all-recipes {
+    padding-right: 200px;
 }
