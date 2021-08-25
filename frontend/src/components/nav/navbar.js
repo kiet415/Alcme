@@ -24,6 +24,7 @@ class NavBar extends React.Component {
         );
       } else {
         return (
+   <Link to="/aboutus">About Us</Link>
             <div className="buttons-top-right">
               <button className="all-recipes"><Link to="/recipes" className="ingredient-index-button">All Recipes</Link></button>
               <button className="logout-login"><Link to={'/login'} >Login</Link></button>

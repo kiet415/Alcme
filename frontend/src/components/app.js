@@ -12,6 +12,7 @@ import RecipeCreateContainer from './recipes/recipe_create_container'
 import IngredientIndexContainer from './ingredients/ingredient_index_container';
 import RecipeIndexContainer from './recipes/recipe_index_container'
 import RecipeFiltered from './recipes/recipe_filtered';
+import AboutUs from './about/about'
 const App = () => (
   <div className="root-home">
     <NavBarContainer />
@@ -23,8 +24,9 @@ const App = () => (
         <Route exact path="/ingredient/:id" component={IngredientShow }/>
         <Route exact path="/recipes" component={RecipeIndexContainer}/>
         <Route exact path="/recipe/create" component={RecipeCreateContainer}/>
+        <Route exact path="/aboutus" component={AboutUs}/>
+        <Route exact path="/recipe/:id" component={RecipeShowContainer}/>
         <Route exact path="/recipe/filtered" component={RecipeFiltered}/>
-
         <Route exact path="/recipe/:id" component={RecipeShowContainer}/>
 
     </Switch>

@@ -106,7 +106,7 @@ div#recipe-manage>button{
 .logo {
     width: 400px;
 }
-.ingredient-signup {
+.create-recipe {
     border-radius: 15%;
     background-color: mintcream;
     text-decoration: none;
@@ -124,11 +124,36 @@ div#recipe-manage>button{
     margin-left: 8px;
     margin-top: 5px;
 }
-.signup-button:active{
+.create-recipe:active{
     transform: scale(0.98);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
 }
-.logout-login {
+
+.signup {
+    border-radius: 15%;
+    background-color: lightgrey;
+    text-decoration: none;
+    color:rgb(46, 46, 46);
+    padding: 2px 6px 4px 6px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    border-radius: 10%;
+    box-shadow: black 4px 2px 2px 2px;
+    text-shadow: black;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+.signup:active{
+    transform: scale(0.98);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+
+.logout {
     border-radius: 15%;
     background-color: mintcream;
     text-decoration: none;
@@ -177,6 +202,41 @@ h3#chart-title {
     transform: scale(0.98);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
 }
+
+.logged-in-buttons {
+    position: absolute;
+    right: 10px;
+    text-align: right;
+}
+
+.login {
+    border-radius: 15%;
+    background-color: lightgrey;
+    text-decoration: none;
+    color:rgb(46, 46, 46);
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    border-radius: 10%;
+    box-shadow: black 4px 2px 2px 2px;
+    text-shadow: black;
+    margin: 35px 10px 10px 8px;
+    font-family: monospace;
+    font-size: 24px;
+}
+.login:active{
+    transform: scale(0.98);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.logged-out-buttons {
+    position: absolute;
+    right: 10px;
+    text-align: right;
+}
+
 .navbar-head {
     width: 98%;
     display: flex;
@@ -361,6 +421,7 @@ h3#chart-title {
     width: 400px;
     margin-right: 50px;
 }
+
 .buttons-top-right {
     position: absolute;
     right: 10px;
@@ -381,6 +442,7 @@ h3#chart-title {
     background: transparent;
     border: none;
 }
+
 .create-recipe-directions-list {
     border: 1px solid mintcream;
     color: rgb(46, 46, 46);
