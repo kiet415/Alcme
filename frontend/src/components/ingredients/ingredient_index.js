@@ -13,12 +13,11 @@ class IngredientIndex extends React.Component {
   componentDidMount() {
     this.props.fetchIngredients();
   }
-  handleClick = (e) => {
-    //console.log(e.target.innerText)
-    if(!this.state.ingredients.includes(e.target.innerText)) {
-      this.setState({ingredients: this.state.ingredients.concat(e.target.innerText) })
+  handleClick = (item) => {
+    if(!this.state.ingredients.includes(item)) {
+      this.setState({ingredients: this.state.ingredients.concat(item) })
     } else {
-      let idx = this.state.ingredients.indexOf(e.target.innerText)
+      let idx = this.state.ingredients.indexOf(item)
       let newArray = this.state.ingredients.slice(0,idx).concat(this.state.ingredients.slice(idx+1, this.state.ingredients.length))
       this.setState({ingredients: newArray})
     }
@@ -37,10 +36,11 @@ class IngredientIndex extends React.Component {
     }
 
   }
+
+  
   render() {
     if(this.props.ingredients[0] === undefined) return null;
     // let imgUrl = "https://spoonacular.com/cdn/ingredients_500x500/"
-    console.log(this.props)
     return (
       <div className="main-window">
         <div className="index-home"> 
@@ -49,27 +49,41 @@ class IngredientIndex extends React.Component {
             
             <ul className="index-ul">
               {this.props.ingredients[0].map((ingredient, index) => (
-                <div className="index-div" key={index}>
-                  <li className="index-ingredient" key={index} onClick={((e) => this.handleClick(e))} key={index}>
-                    <div className="ingredient-name">{ingredient['name']}</div>
-                    <br/>
-                    <div className=".ingredient-index-image-div">
-                      <img src={ingredient.imageUrl} className="ingredient-index-image"/>
+                <div className="index-div">
+                  <li className="index-ingredient" onClick={() => this.handleClick(ingredient['name'])} key={index}>
+                    <div className="ingredient-name" key={index}>{ingredient['name']}</div>
+                    
+                    <div className="ingredient-index-image-div" >
+                      <img src={ingredient.imageUrl} onClick={() =>this.handleClick(ingredient['name'])} className="ingredient-index-image"/>
                     </div>
                   </li>
                   <IngredientIndexItem 
-                     id={index} ingId={ingredient.id}
+                     id={index} ingId={ingredient.id} 
                   />
                 </div>
               ))}
   
             </ul>
             <div className="selected-ingredients">
-              <h1>Selected Ingredients</h1>
-              {this.state.ingredients.map(ingredient => (
-                <div>{ingredient} </div>
-              ))}
-              <button onClick={this.handleSubmit} className="selected-ingredients-button">Click to Search for Recipes</button>
+
+              <div className="instructions">
+                <h1>Instructions</h1>
+    
+                <div>Simply just click on any of these ingredients and it will be
+                  added to the list. If you want to remove the item, just click on it again.
+                  Once you're done click the "Search for Recipe" button to see your results.
+                </div>
+              </div>
+
+              <div>
+                <h1>Selected Ingredients</h1>
+                {this.state.ingredients.map(ingredient => (
+                  <div className="ingredient-item">{ingredient} </div>
+                ))}
+                <button onClick={this.handleSubmit} className="selected-ingredients-button">Click to Search for Recipes</button> 
+              </div>
+
+             
             </div>
           </div >
         </div>

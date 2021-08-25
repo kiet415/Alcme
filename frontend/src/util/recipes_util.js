@@ -25,6 +25,6 @@ export const getRecipeInfo = id => {
 }
 
 export const deleteRecipe = id => {
-    return axios.get(`/api/spoon/delete/${id}`)
+    return axios.delete(`/api/recipes/delete/${id}`)
 }
 

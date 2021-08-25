@@ -15,22 +15,20 @@ class NavBar extends React.Component {
   getLinks() {
       if (this.props.loggedIn) {
         return (
-            <div className="logged-in-buttons">
-                <button onClick={this.logoutUser} className="logout">Logout</button>
-                <br/>
-                <Link to="/recipe/create" className="create-recipe">Create Recipe</Link>
-                <Link to="/recipes" className="ingredient-index-button">All Recipes</Link>
-                <Link to="/aboutus">About Us</Link>
+            <div className="buttons-top-right">
+                <button className="all-recipes"><Link to="/recipes" className="ingredient-index-button">All Recipes</Link></button>
+                <button className="all-recipes"><Link to="/recipe/create" className="ingredient-signup">Create Recipe</Link></button>
+
+                <button onClick={this.logoutUser} className="logout-login"><a>Logout</a></button>
             </div>
         );
       } else {
         return (
-            <div className="logged-out-buttons">
-              <Link to={'/login'} className="login">Login</Link>
-              <br/>
-              <Link to={'/signup'} className="signup">Signup</Link>
-              <Link to="/recipes" className="ingredient-index-button">All Recipes</Link>
-              <Link to="/aboutus">About Us</Link>
+   <Link to="/aboutus">About Us</Link>
+            <div className="buttons-top-right">
+              <button className="all-recipes"><Link to="/recipes" className="ingredient-index-button">All Recipes</Link></button>
+              <button className="logout-login"><Link to={'/login'} >Login</Link></button>
+              <button className="logout-login"><Link to={'/signup'} >Signup</Link></button>
             </div>
         );
       }
@@ -39,7 +37,7 @@ class NavBar extends React.Component {
   render() {
       return (
         <div className="navbar-head">
-              <a href="http://localhost:3000/#/" className="logo">
+              <a href="/" className="logo">
                 <img src="ALcme.png"></img>
               </a>
             { this.getLinks() }

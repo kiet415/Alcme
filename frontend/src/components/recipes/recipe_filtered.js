@@ -12,7 +12,8 @@ class RecipeFiltered extends React.Component {
     render() {
         //if(this.props.recipes === undefined) return null;
         let recipes = this.props.location.state.recipes
-        
+    
+        console.log(recipes)
         return (
             <div>
                 <h1 className="recipe-index-title">Recipes with your ingredients</h1>
@@ -26,17 +27,19 @@ class RecipeFiltered extends React.Component {
 
         
                             </Link>
-                            <div className="filtered-middle">Items used from list:
+                            <div className="filtered-middle">
+                                Items used from list:
                             {recipe.usedIngredients.map(ingredient => (
                                 <ul className="filtered-list-items">
-                                    <li>{ingredient.name}</li>
+                                    <div>{ingredient.name}</div>
                                 </ul>
                             ))}
                             </div>
-                            <div className="filtered-right">Items needed:
+                            <div className="filtered-right">
+                                Items needed:
                             {recipe.missedIngredients.map(ingredient => (
                                 <ul className="filtered-list-items">
-                                    <li>{ingredient.name}</li>
+                                    <div>{ingredient.name}</div>
                                 </ul>
                             ))}
                             </div>
