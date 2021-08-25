@@ -36,13 +36,33 @@ class IngredientIndex extends React.Component {
     }
 
   }
+  splashPage = (e) => {
+    e.preventDefault();
+    return (
+      <div>
 
+      </div>
+    )
+  }
   
   render() {
     if(this.props.ingredients[0] === undefined) return null;
     // let imgUrl = "https://spoonacular.com/cdn/ingredients_500x500/"
     return (
       <div className="main-window">
+          <div>
+            <img src="" />
+            <h1>Welcome to Alcme!</h1>
+            <div>
+              Have you ever found yourself with the urge to cook, but came up short on ideas? 
+              If so, then Alcme might just be the perfect addition to your kitchen. Just start by selecting a few ingredients  
+              and you’ll be provided a list of recipes to choose from. Whether you’re not sure what sounds good to eat or you’re 
+              curious about what you can make with what you’ve got in the fridge, Alcme has you covered.  
+              If you find something you’d like to try but it doesn’t quite fit the moment, just sign in and you can save your recipes to your
+              profile. You can even use Alcme to upload and edit your own creations. 
+              Don’t let a lack of inspiration come between you and your next meal, try Alcme today!
+            </div>
+          </div>
         <div className="index-home"> 
         <h1>List of all ingredients</h1>
           <div className="ingredient-list-component">

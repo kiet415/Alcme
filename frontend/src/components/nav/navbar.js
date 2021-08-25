@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-
+import {AboutUs} from '../about/about'
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -16,17 +16,18 @@ class NavBar extends React.Component {
       if (this.props.loggedIn) {
         return (
             <div className="buttons-top-right">
+          
                 <button className="all-recipes"><Link to="/recipes" className="ingredient-index-button">All Recipes</Link></button>
-                <button className="all-recipes"><Link to="/recipe/create" className="ingredient-signup">Create Recipe</Link></button>
-
+                <button className="all-recipes"><Link to="/recipe/create" className="ingredient-index-button">Create Recipe</Link></button>
+                <button className="all-recipes"><Link to="/aboutus" className="ingredient-index-button">About Us</Link></button>
                 <button onClick={this.logoutUser} className="logout-login"><a>Logout</a></button>
             </div>
         );
       } else {
         return (
-   <Link to="/aboutus">About Us</Link>
             <div className="buttons-top-right">
               <button className="all-recipes"><Link to="/recipes" className="ingredient-index-button">All Recipes</Link></button>
+              <button className="all-recipes"><Link to="/aboutus" className="ingredient-index-button">About Us</Link></button>
               <button className="logout-login"><Link to={'/login'} >Login</Link></button>
               <button className="logout-login"><Link to={'/signup'} >Signup</Link></button>
             </div>

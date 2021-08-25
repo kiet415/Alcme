@@ -25,7 +25,6 @@ const App = () => (
         <Route exact path="/recipes" component={RecipeIndexContainer}/>
         <Route exact path="/recipe/create" component={RecipeCreateContainer}/>
         <Route exact path="/aboutus" component={AboutUs}/>
-        <Route exact path="/recipe/:id" component={RecipeShowContainer}/>
         <Route exact path="/recipe/filtered" component={RecipeFiltered}/>
         <Route exact path="/recipe/:id" component={RecipeShowContainer}/>
 

@@ -13,7 +13,6 @@ class RecipeFiltered extends React.Component {
         //if(this.props.recipes === undefined) return null;
         let recipes = this.props.location.state.recipes
     
-        console.log(recipes)
         return (
             <div>
                 <h1 className="recipe-index-title">Recipes with your ingredients</h1>

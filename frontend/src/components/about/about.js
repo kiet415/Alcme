@@ -3,11 +3,19 @@ import React from 'react';
 class AboutUs extends React.Component {
     render() {
         return (
-            <div>
+            <div className="about-us-page">
                 <h1 className="about-us-title">Meet the Developers</h1>
+                <div className="about-us-info">
+                    Alcme is a project created by three passionate engineers from 
+                    App Academy where we wanted to provide a means of inspiration
+                    for cooks at home. Alcme allows users to select ingredients
+                    that they have and filters out what possible recipes that they
+                    can make from them.
+                </div>
                 <div className="about-us">
                     <div>
-                        <h3 className="dev-title">Kiet </h3>
+                        <h3 className="dev-title">Kiet Nguyen</h3>
+                        <h5 className="dev-role">Project Lead and Frontend</h5>
                         <div className="about-dev">
                             <img className="dev-image" src="kiet.jpg"></img>
                             <p className="dev-oneliner">The genius behind Alcme... "I always have food in my fridge but never know what to make"</p>
@@ -27,7 +35,8 @@ class AboutUs extends React.Component {
                     </div>
                     <br/>
                     <div>
-                    <h3 className="dev-title">Joshua </h3>
+                    <h3 className="dev-title">Joshua Elliott</h3>
+                    <h5 className="dev-role">Backend and API</h5>
                         <div className="about-dev">
                             <img className="dev-image" src="josh.png"></img>
                             <p className="dev-oneliner">Former fine-dining chef turned software developer... "I just can't leave food behind"</p>
@@ -47,7 +56,8 @@ class AboutUs extends React.Component {
                     </div>
                     <br/>
                     <div>
-                    <h3 className="dev-title">Luca </h3>
+                    <h3 className="dev-title">Luca Brilli</h3>
+                    <h5 className="dev-role">User Auth and Float</h5>
                         <div className="about-dev">
                             <img className="dev-image" src="luca.jpeg"></img>
                             <p className="dev-oneliner">Techie, foodie, and software developer... "I love good food"</p>

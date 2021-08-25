@@ -1,24 +1,29 @@
 .about-us-title {
     text-align: center;
+    font-size: 60px;
 }
 .about-us {
     display: flex;
     justify-content: space-evenly;
 }
-
+.about-us-page {
+    text-align: center;
+}
 .about-dev {
     display: flex;
 }
 
 .dev-image {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     padding-right: 10px;
     padding-bottom: 10px;
+    border-radius: 50px;
 }
 
 .dev-title {
     text-align: center;
+    font-size: 38px;
 }
 
 .dev-oneliner {
@@ -32,9 +37,24 @@
 .linked-in-logo {
     height: 100px;
     width: 100px;
+    padding-right: 100px;
 }
 
 .github-logo {
     height: 100px;
     width: 100px;
+}
+.dev-role {
+    text-align: center;
+    font-size: 24px;
+    margin-top: -10px;
+}
+
+.about-us-info {
+    
+    text-align: center;
+    width: 1000px;
+    margin: auto;
+    font-size: 32px;
+    padding-bottom: 50px;
 }
