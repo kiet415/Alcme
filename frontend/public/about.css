@@ -1,0 +1,40 @@
+.about-us-title {
+    text-align: center;
+}
+.about-us {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.about-dev {
+    display: flex;
+}
+
+.dev-image {
+    height: 200px;
+    width: 200px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.dev-title {
+    text-align: center;
+}
+
+.dev-oneliner {
+    width: 250px;
+}
+
+.icons {
+    display: flex;
+}
+
+.linked-in-logo {
+    height: 100px;
+    width: 100px;
+}
+
+.github-logo {
+    height: 100px;
+    width: 100px;
+}
