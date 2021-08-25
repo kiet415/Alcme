@@ -38,7 +38,7 @@ class NavBar extends React.Component {
   render() {
       return (
         <div className="navbar-head">
-              <a href="/" className="logo">
+              <a href="/#/ingredients" className="logo">
                 <img src="ALcme.png"></img>
               </a>
             { this.getLinks() }

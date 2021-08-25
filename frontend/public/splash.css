@@ -1,0 +1,28 @@
+.splash-page {
+    text-align: center;
+    color: black;
+    
+    padding-top: 200px;
+    
+}
+.splash-title {
+    font-size: 62px;
+}
+.splash-page button {
+    margin-top: 20px;
+    background-color: mintcream;
+    font-size: 24px;
+    box-shadow: black 2px 2px 2px 2px;
+    text-shadow: black;
+}
+.splash-info {
+   
+    margin: auto;
+    width: 1500px;
+    font-size: 32px;
+}
+.splash-page img {
+    padding-top: 50px;
+    width: 800px;
+    height: 500px;
+}

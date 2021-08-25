@@ -90,7 +90,6 @@ div.root-home {
     min-height: 110vh;
     width: 100vw;
     top:0;
-    
 }
 div#recipe-image-standin{
     background-color: whitesmoke;
@@ -437,6 +436,7 @@ h3#chart-title {
     background: mintcream;
     text-decoration: none;
     color: black;
+    
 }
 .all-recipes {
     background: transparent;
