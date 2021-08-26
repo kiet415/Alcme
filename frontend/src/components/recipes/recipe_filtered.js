@@ -29,18 +29,22 @@ class RecipeFiltered extends React.Component {
                             <div className="filtered-middle">
                                 Items used from list:
                             {recipe.usedIngredients.map(ingredient => (
-                                <ul className="filtered-list-items">
+                                <ul className="filtered-list-items" id="title">
                                     <div>{ingredient.name}</div>
                                 </ul>
                             ))}
                             </div>
                             <div className="filtered-right">
                                 Items needed:
-                            {recipe.missedIngredients.map(ingredient => (
-                                <ul className="filtered-list-items">
-                                    <div>{ingredient.name}</div>
-                                </ul>
-                            ))}
+                            {recipe.missedIngredients.map((ingredient, idx) => {
+                                if (idx < 6) {
+                                    return (
+                                        <ul className="filtered-list-items">
+                                            <div>{ingredient.name}</div>
+                                        </ul>
+                                    )
+                                }
+                                })}
                             </div>
                             
                         </div>
