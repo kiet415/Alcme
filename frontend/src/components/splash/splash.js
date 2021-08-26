@@ -20,7 +20,7 @@ class Splash extends React.Component {
                 </div>
                 <button onClick={this.continueButton}>Continue</button>
                 <br/>
-                <img src="ALcme.png"/>
+                <img src="ALcme.png" alt="icon"/>
             </div>
         )
     }

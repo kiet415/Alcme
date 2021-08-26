@@ -10,7 +10,6 @@ export const getRecipe = id => {
 }
 // change to create recipe in db
 export const createRecipe = data => {
-    console.log(data)
     return axios.post(`/api/recipes/create`, data)
 }
 

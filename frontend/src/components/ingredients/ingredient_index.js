@@ -1,6 +1,5 @@
 import React from 'react';
 import IngredientIndexItem from './ingredient_index_item';
-import { Link } from 'react-router-dom';
 class IngredientIndex extends React.Component {
   constructor(props) {
     super(props)
@@ -59,12 +58,12 @@ class IngredientIndex extends React.Component {
             
             <ul className="index-ul">
               {this.props.ingredients[0].map((ingredient, index) => (
-                <div className="index-div">
-                  <li className="index-ingredient" onClick={() => this.handleClick(ingredient['name'])} key={index}>
-                    <div className="ingredient-name" key={index}>{ingredient['name']}</div>
+                <div className="index-div"key={index+'a'}>
+                  <li className="index-ingredient" key={index+'b'} onClick={() => this.handleClick(ingredient['name'])} key={index}>
+                    <div className="ingredient-name" key={index+'c'}>{ingredient['name']}</div>
                     
-                    <div className="ingredient-index-image-div" >
-                      <img src={ingredient.imageUrl} onClick={() =>this.handleClick(ingredient['name'])} className="ingredient-index-image"/>
+                    <div className="ingredient-index-image-div" key={index+'d'} >
+                      <img src={ingredient.imageUrl} alt="ingredient" onClick={() =>this.handleClick(ingredient['name'])} className="ingredient-index-image"/>
                     </div>
                   </li>
                   <IngredientIndexItem 
@@ -87,8 +86,8 @@ class IngredientIndex extends React.Component {
 
               <div>
                 <h1>Selected Ingredients</h1>
-                {this.state.ingredients.map(ingredient => (
-                  <div className="ingredient-item">{ingredient} </div>
+                {this.state.ingredients.map((ingredient,index) => (
+                  <div className="ingredient-item" key={index}>{ingredient} </div>
                 ))}
                 <button onClick={this.handleSubmit} className="selected-ingredients-button">Click to Search for Recipes</button> 
               </div>

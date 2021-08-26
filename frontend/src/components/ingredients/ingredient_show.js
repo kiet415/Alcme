@@ -13,7 +13,7 @@ class IngredientShow extends React.Component {
             <div id="ing-show-frame">
 
             <div id="ing-show-back">
-            <img src={`https://spoonacular.com/cdn/ingredients_500x500/${this.props.ingredient.image}`} />
+            <img alt="ingredient" src={`https://spoonacular.com/cdn/ingredients_500x500/${this.props.ingredient.image}`} />
             </div>
             </div>
         <h1 className="ingredient-title">

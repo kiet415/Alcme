@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import {AboutUs} from '../about/about'
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -39,7 +38,7 @@ class NavBar extends React.Component {
       return (
         <div className="navbar-head">
               <a href="/#/ingredients" className="logo">
-                <img src="ALcme.png"></img>
+                <img src="ALcme.png" alt="icon"></img>
               </a>
             { this.getLinks() }
         </div>

@@ -1,4 +1,3 @@
-import { STATES } from 'mongoose';
 import { connect } from 'react-redux';
 import { fetchRecipe, fetchRecipeInfo, removeRecipe } from '../../actions/recipe_actions';
 import RecipeShow from './recipe_show';

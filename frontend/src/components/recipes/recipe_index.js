@@ -1,16 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 class RecipeIndex extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+   
     componentDidMount() {
         this.props.fetchRecipes();
     }
     render() {
         
         if(this.props.recipes === undefined) return null;
-        console.log(this.props)
         return (
             <div>
                 <h1 className="recipe-index-title">All Recipes</h1>
@@ -24,7 +21,7 @@ class RecipeIndex extends React.Component {
                                         {recipe.title}
                                     </div>
                                     <div>
-                                        <img src={recipe.image}/>
+                                        <img src={recipe.image} alt="recipe"/>
                                     </div>
                                     
                                 </Link>
@@ -34,7 +31,7 @@ class RecipeIndex extends React.Component {
                                         {recipe.title}
                                     </div>
                                     <div>
-                                        <img src={recipe.image}/>
+                                        <img src={recipe.image} alt="recipe"/>
                                     </div>
                                 </Link>
                             }

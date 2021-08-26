@@ -1,13 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 class RecipeFiltered extends React.Component {
-    constructor(props) {
-        super(props);
-        
-    }
-    componentDidMount() {
-        //this.props.fetchRecipes();
-    }
     
     render() {
         //if(this.props.recipes === undefined) return null;
@@ -18,31 +11,33 @@ class RecipeFiltered extends React.Component {
                 <h1 className="recipe-index-title">Recipes with your ingredients</h1>
                 <div className="recipe-row-div">
                     {recipes.map((recipe,index) => (
-                        <div className="filtered-recipes"key={index}>
-                            <Link to={`/recipe/${recipe.id}`} className="filtered-left">
+                        <div className="filtered-recipes"key={index+'x'}>
+                            <Link to={`/recipe/${recipe.id}`} className="filtered-left" key={index+'v'}>
                                 <div>{recipe.title}</div>
                                 <br/>
-                                <div className= "filt-rec-img"><img src={recipe.image}/></div>
+                                <div className= "filt-rec-img"><img src={recipe.image} alt="recipe"/></div>
 
         
                             </Link>
-                            <div className="filtered-middle">
+                            <div className="filtered-middle" key={index+'w'}>
                                 Items used from list:
                             {recipe.usedIngredients.map(ingredient => (
-                                <ul className="filtered-list-items" id="title">
+                                <ul className="filtered-list-items" id="title" key={index+'x'}>
                                     <div>{ingredient.name}</div>
                                 </ul>
                             ))}
                             </div>
-                            <div className="filtered-right">
+                            <div className="filtered-right" key={index+'y'}>
                                 Items needed:
                             {recipe.missedIngredients.map((ingredient, idx) => {
                                 if (idx < 6) {
                                     return (
-                                        <ul className="filtered-list-items">
+                                        <ul className="filtered-list-items" key={index+'z'}>
                                             <div>{ingredient.name}</div>
                                         </ul>
                                     )
+                                } else {
+                                    return null
                                 }
                                 })}
                             </div>

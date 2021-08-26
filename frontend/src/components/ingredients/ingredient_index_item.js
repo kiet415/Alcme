@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class IngredientIndexItem extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+
     render() {
     return (
         <div>
