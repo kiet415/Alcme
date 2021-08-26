@@ -9,7 +9,7 @@ const Ingredient = require('../../models/Ingredient');
 
 router.get('/', (req, res) => {
   Ingredient.aggregate([{
-    $sample: { size: 50 }
+    $sample: { size: 200 }
       }])
     .then(list => 
       res.json(list));
