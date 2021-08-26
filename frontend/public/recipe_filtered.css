@@ -1,0 +1,84 @@
+.recipe-index-title {
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+    text-align: center;
+    text-shadow: black;
+    padding-bottom: 30px;
+}
+
+.filtered-recipes {
+    display: flex;
+    padding: 10px;
+    border: 1px solid mintcream;
+    background: mintcream;
+    box-shadow: black 2px 2px 2px 2px;
+    height: 320px;
+    width: 900px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.filt-rec-img img{
+    width: 250px;
+}
+.filtered-left {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    flex-wrap: wrap;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtered-list-items {
+    text-align: center;
+    padding-top: 20px;
+}
+.filtered-rec-img {
+    width: 320px;
+    height: 320px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: auto;
+}
+
+.filtered-middle {
+    display: flex;
+    flex-direction: column;
+    max-width:40%;
+    flex-wrap: wrap;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+    border: 1px solid black;
+    
+}
+
+.filtered-right {
+    display: flex;
+    flex-direction:column;
+    width:33%;
+    flex-wrap: wrap;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(46, 46, 46);
+    text-shadow: black;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.recipe-row-div {
+    margin: auto;
+}
