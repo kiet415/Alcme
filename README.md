@@ -4,11 +4,11 @@
 <h3 style="text-align: center;">A lightweight calendar web app for organizing your life</h3>
 
 ## Table of contents
-[About the App](#about-the-app)
-[Features](#features)
-[How to use](#how-to-use)
-[Technologies](#technologies)
-[Future Features](#future-features)
++ [About the App](#about-the-app)
++ [Features](#features)
++ [How to use](#how-to-use)
++ [Technologies](#technologies)
++ [Future Features](#future-features)
 
 ## About the app
 Have you ever found yourself with the urge to cook, but came up short on ideas? If so, then Alcme might just be the perfect addition to your kitchen. Just start by selecting a few ingredients  and you'll be provided a list of recipes to choose from. Whether you're not sure what sounds good to eat or you're curious about what you can make with what you've got in the fridge, Alcme has you covered.  
