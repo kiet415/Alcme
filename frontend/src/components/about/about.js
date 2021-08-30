@@ -18,7 +18,10 @@ class AboutUs extends React.Component {
                         <h5 className="dev-role">Project Lead and Frontend</h5>
                         <div className="about-dev">
                             <img className="dev-image" src="kiet.jpg" alt="icon"></img>
-                            <p className="dev-oneliner">The genius behind Alcme... "I always have food in my fridge but never know what to make"</p>
+                            <div className="dev-oneliner">The creator of Alcme
+                            <br />
+                            <br /> 
+                            "I always have food in my fridge but never know what to make"</div>
                         </div>
                         <div className="icons">
                             <div className="linked-in-icon">
@@ -39,7 +42,10 @@ class AboutUs extends React.Component {
                     <h5 className="dev-role">Backend and API</h5>
                         <div className="about-dev">
                             <img className="dev-image" src="josh.png" alt="icon" ></img>
-                            <p className="dev-oneliner">Former fine-dining chef turned software developer... "I just can't leave food behind"</p>
+                            <div className="dev-oneliner">Former fine-dining chef turned software developer 
+                            <br />
+                            <br />
+                            "I just can't leave food behind"</div>
                         </div>
                         <div className="icons">
                             <div className="linked-in-icon">
@@ -60,7 +66,10 @@ class AboutUs extends React.Component {
                     <h5 className="dev-role">User Auth and Float</h5>
                         <div className="about-dev">
                             <img className="dev-image" src="luca.jpeg" alt="icon"></img>
-                            <p className="dev-oneliner">Techie, foodie, and software developer... "I love good food"</p>
+                            <div className="dev-oneliner">Techie, foodie, and software developer 
+                            <br />
+                            <br />
+                            "I love good food"</div>
                         </div>
                         <div className="icons">
                             <div className="linked-in-icon">
