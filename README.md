@@ -5,7 +5,7 @@
 
 ## Table of contents
 + [About the App](#about-the-app)
-+ [Features](#features)
++ [Features and their challenges](#features-and-their-challenges)
 + [How to use](#how-to-use)
 + [Technologies](#technologies)
 + [Future Features](#future-features)
