@@ -5,7 +5,7 @@ class RecipeFiltered extends React.Component {
     render() {
         //if(this.props.recipes === undefined) return null;
         let recipes = this.props.location.state.recipes
-    
+        console.log(recipes)
         return (
             <div>
                 <h1 className="recipe-index-title">Recipes with your ingredients</h1>
@@ -22,23 +22,24 @@ class RecipeFiltered extends React.Component {
                             <div className="filtered-middle" key={index+'w'}>
                                 Items used from list:
                             {recipe.usedIngredients.map(ingredient => (
-                                <ul className="filtered-list-items" id="title" key={index+'x'}>
-                                    <div>{ingredient.name}</div>
+                                <ul className="filtered-list-items" id="title" key={index}>
+                                    <div key={index+'ha'} >{ingredient.originalName}</div>
                                 </ul>
                             ))}
                             </div>
                             <div className="filtered-right" key={index+'y'}>
                                 Items needed:
                             {recipe.missedIngredients.map((ingredient, idx) => {
-                                if (idx < 6) {
+                                if (idx < 4) {
                                     return (
-                                        <ul className="filtered-list-items" key={index+'z'}>
-                                            <div>{ingredient.name}</div>
+                                        <ul className="filtered-list-items" key={idx} >
+                                            <div key={idx+'za'}>{ingredient.originalName}</div>
                                         </ul>
                                     )
-                                } else {
-                                    return null
+                                } else  {
+                                    return null;
                                 }
+                                
                                 })}
                             </div>
                             
