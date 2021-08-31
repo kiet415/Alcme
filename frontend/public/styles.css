@@ -714,3 +714,13 @@ h1 {
 .all-recipes {
     padding-right: 200px;
 }
+
+a:hover {
+    cursor: pointer;
+}
+img:hover {
+    cursor: pointer;
+}
+.ingredient-name:hover {
+    cursor: pointer;
+}
