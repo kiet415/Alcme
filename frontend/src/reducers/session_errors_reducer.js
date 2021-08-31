@@ -13,7 +13,7 @@ import {
       case RECEIVE_CURRENT_USER:
         return nextState;
       case CLEAR_SESSION_ERRORS:
-        return nextState;
+        return {};
       default:
         return state;
     }

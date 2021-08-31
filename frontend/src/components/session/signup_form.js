@@ -19,7 +19,9 @@ class SignupForm extends React.Component {
     componentDidMount() {
       this.props.clearSessionErrors()
     }
-
+    componentWillUnmount() {
+      this.props.clearSessionErrors()
+    }
     componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser === true) {
       this.props.history.push('/');
@@ -44,12 +46,8 @@ class SignupForm extends React.Component {
       password2: this.state.password2
     };
 
-    if (this.state.errors ) {
-      this.props.signup(user, this.props.history) 
-      // this.props.history.push('/login')
-    };
-    
-    // this.props.login(user, this.props.history);
+     
+    this.props.signup(user)
   }
   
 
