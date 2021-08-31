@@ -130,7 +130,6 @@ class RecipeShow extends React.Component {
     }
     render() {
         if(!this.props.recipe) return null;
-        console.log(this.props.recipe)
         return (
             
             <div>
