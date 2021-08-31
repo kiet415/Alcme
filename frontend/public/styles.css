@@ -204,7 +204,7 @@ h3#chart-title {
 .logout-login {
     border: none;
     background: transparent;
-    
+    border-radius: 5px;
 }
 .logged-in-buttons {
     position: absolute;
@@ -726,9 +726,12 @@ h1 {
 a:hover {
     cursor: pointer;
 }
-img:hover {
+.ingredient-index-image:hover {
     cursor: pointer;
 }
 .ingredient-name:hover {
+    cursor: pointer;
+}
+.logout-login:hover {
     cursor: pointer;
 }
