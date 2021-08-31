@@ -18,7 +18,7 @@ class Splash extends React.Component {
                     profile. You can even use Alcme to upload and edit your own creations. 
                     Don’t let a lack of inspiration come between you and your next meal, try Alcme today!
                 </div>
-                <button onClick={this.continueButton}>Continue</button>
+                <button className="logout-login" onClick={this.continueButton}>Continue</button>
                 <br/>
                 <img src="ALcme.png" alt="icon"/>
             </div>
