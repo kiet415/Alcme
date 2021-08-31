@@ -25,12 +25,12 @@ class AboutUs extends React.Component {
                         </div>
                         <div className="icons">
                             <div className="linked-in-icon">
-                            <a href="https://www.linkedin.com/in/kietnguyen7/">
+                            <a href="https://www.linkedin.com/in/kietnguyen7/" target="_blank" rel="noreferrer noopener">
                                 <img className="linked-in-logo" src="linkedin.png" alt="icon" ></img>
                             </a>
                             </div>
                             <div className="git-hub-icon">
-                                <a href="https://github.com/kiet415">
+                                <a href="https://github.com/kiet415" target="_blank" rel="noreferrer noopener">
                                     <img className="github-logo" src="github.png" alt="icon" ></img>
                                 </a>
                             </div>
@@ -49,12 +49,12 @@ class AboutUs extends React.Component {
                         </div>
                         <div className="icons">
                             <div className="linked-in-icon">
-                                <a href="https://www.linkedin.com/in/joshua-elliott-a044b0209/">
+                                <a href="https://www.linkedin.com/in/joshua-elliott-a044b0209/" target="_blank" rel="noreferrer noopener">
                                     <img className="linked-in-logo" src="linkedin.png" alt="icon" ></img>
                                 </a>
                             </div>
                             <div className="git-hub-icon">
-                                <a href="https://github.com/brassmacks">
+                                <a href="https://github.com/brassmacks" target="_blank" rel="noreferrer noopener">
                                     <img className="github-logo" src="github.png" alt="icon" ></img>
                                 </a>
                             </div>
@@ -73,12 +73,12 @@ class AboutUs extends React.Component {
                         </div>
                         <div className="icons">
                             <div className="linked-in-icon">
-                                <a href="https://www.linkedin.com/in/lucabrilli/">
+                                <a href="https://www.linkedin.com/in/lucabrilli/" target="_blank" rel="noreferrer noopener">
                                     <img className="linked-in-logo" src="linkedin.png" alt="icon"></img>
                                 </a>
                             </div>
                             <div className="git-hub-icon">
-                                <a href="https://github.com/lbrilli">
+                                <a href="https://github.com/lbrilli" target="_blank" rel="noreferrer noopener">
                                     <img className="github-logo" src="github.png" alt="icon"></img>
                                 </a>
                             </div>

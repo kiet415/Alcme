@@ -13,9 +13,20 @@ class SignupForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.clearedErrors = false;
+    this.renderErrors = this.renderErrors.bind(this);
+    // this.clearedErrors = false;
   }
+    componentDidMount() {
+      this.props.clearSessionErrors()
+    }
 
+    componentWillReceiveProps(nextProps) {
+    if (nextProps.currentUser === true) {
+      this.props.history.push('/');
+    }
+
+    this.setState({errors: nextProps.errors})
+  }
 
   update(field) {
     return e => this.setState({
@@ -24,6 +35,7 @@ class SignupForm extends React.Component {
   }
 
   handleSubmit(e) {
+    this.state.errors = {};
     e.preventDefault();
     let user = {
       email: this.state.email,
@@ -32,9 +44,10 @@ class SignupForm extends React.Component {
       password2: this.state.password2
     };
 
-    this.props.signup(user, this.props.history).then( res =>
-      this.props.history.push('/login')
-    );
+    if (this.state.errors ) {
+      this.props.signup(user, this.props.history) 
+      // this.props.history.push('/login')
+    };
     
     // this.props.login(user, this.props.history);
   }
@@ -57,6 +70,7 @@ class SignupForm extends React.Component {
       <div className="authpage">
         <form onSubmit={this.handleSubmit}>
           <h1>Sign Up</h1>
+          <div>{this.renderErrors()}</div>
           <div className="signup-form">
             <br/>
               <input type="text"
@@ -88,7 +102,6 @@ class SignupForm extends React.Component {
               />
             <br/>
             <input className="authbutton" type="submit" value="Submit" />
-            {this.renderErrors()}
           </div>
         </form>
       </div>

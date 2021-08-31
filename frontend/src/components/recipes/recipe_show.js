@@ -97,7 +97,7 @@ class RecipeShow extends React.Component {
                     <img className="recipe-image" src={this.props.recipe.all[0].image} alt="recipe"/>
 
                     <h1 className="h-title">{this.props.recipe.all[0].title}</h1>
-                    <div className="recipe-link"><a  href={this.props.recipe.all[0].spoonacularSourceUrl} >Link to Original Recipe </a></div>
+                    <div className="recipe-link"><a  href={this.props.recipe.all[0].spoonacularSourceUrl} target="_blank" rel="noreferrer noopener">Link to Original Recipe </a></div>
                     <div className="recipe-show-box">
                         <div className="recipe-show-title">
                         
