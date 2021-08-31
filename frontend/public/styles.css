@@ -201,7 +201,11 @@ h3#chart-title {
     transform: scale(0.98);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.24);
 }
-
+.logout-login {
+    border: none;
+    background: transparent;
+    
+}
 .logged-in-buttons {
     position: absolute;
     right: 10px;
@@ -436,11 +440,15 @@ h3#chart-title {
     background: mintcream;
     text-decoration: none;
     color: black;
+    box-shadow: black 4px 2px 2px 2px;
+    text-shadow: black;
+    border-radius: 5px;
     
 }
 .all-recipes {
     background: transparent;
     border: none;
+    border-radius: 5px;
 }
 
 .create-recipe-directions-list {
