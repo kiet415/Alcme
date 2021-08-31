@@ -18,7 +18,7 @@ export const fetchIngredients = () => dispatch => {
     return (
         APIUtil.getIngredients()
             .then(ingredients => dispatch(receiveIngredients(ingredients)))
-            .catch(err => console.log(err))
+            //.catch(err => console.log(err))
     )};
 
 // differentiate from spoonApi call 
@@ -26,7 +26,7 @@ export const fetchIngredient = (id) => dispatch => {
     return (
         APIUtil.getIngredient(id)
             .then(ingredient => dispatch(receiveIngredient(ingredient)))
-            .catch(err => console.log(err))
+            //.catch(err => console.log(err))
     )};
 
 //needs util / reducer                  

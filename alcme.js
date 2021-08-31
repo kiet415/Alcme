@@ -21,7 +21,7 @@ mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   // added useUnifiedTopology as a fix for deprecation warnings
   .then(() => console.log("Connected to MongoDB successfully"))
-  .catch(err => console.log(err));
+  //.catch(err => console.log(err));
 
 app.use(passport.initialize());
 require('./config/passport')(passport);

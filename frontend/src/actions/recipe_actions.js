@@ -28,7 +28,7 @@ export const removeRecipe = (id) => dispatch => {
     return (
         APIUtil.deleteRecipe(id)
             .then(() => dispatch(deleteRecipe()))
-            .catch(err => console.log(err))
+            //.catch(err => console.log(err))
             .then(recipes => dispatch(receiveRecipes(recipes)))
     )};
 
@@ -37,7 +37,7 @@ export const fetchRecipes = () => dispatch => {
     return (
         APIUtil.getRecipes()
             .then(recipes => dispatch(receiveRecipes(recipes)))
-            .catch(err => console.log(err))
+            //.catch(err => console.log(err))
     )};
 
 
@@ -45,26 +45,26 @@ export const fetchRecipe = (id) => dispatch => {
     return (
         APIUtil.getRecipe(id)
             .then(recipe => dispatch(receiveRecipe(recipe)))
-            .catch(err => console.log(err))
+            //.catch(err => console.log(err))
     )};
 
 export const fetchRecipeByIngredients = (id) => dispatch => {
     return (
         APIUtil.getRecipesByIngredients(id)
             .then(recipe => dispatch(receiveRecipes(recipe)))
-            .catch(err => console.log(err))
+            //.catch(err => console.log(err))
     )};    
 
 export const fetchRecipeInfo = (id) => dispatch => {
     return (
         APIUtil.getRecipeInfo(id)
             .then(recipe => dispatch(receiveRecipe(recipe)))
-            .catch(err => console.log(err))
+            //.catch(err => console.log(err))
     )};  
 
 export const createRecipe = (data) => dispatch => {
     return (
         APIUtil.createRecipe(data)
             .then(recipe => dispatch(receiveNewRecipe(recipe)))
-            .catch(err => console.log(err))
+            //.catch(err => console.log(err))
     )};
