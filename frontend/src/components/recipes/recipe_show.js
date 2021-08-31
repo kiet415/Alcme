@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 
 class RecipeShow extends React.Component {
     constructor(props) {
@@ -92,6 +93,10 @@ class RecipeShow extends React.Component {
                 </div>
             )
         } else {
+            const instr = this.props.recipe.all[0].instructions;
+            const instrHTML = ReactHtmlParser(instr)
+            
+            
             return (
                 <div>
                     <img className="recipe-image" src={this.props.recipe.all[0].image} alt="recipe"/>
@@ -113,7 +118,7 @@ class RecipeShow extends React.Component {
                         
                         <div className="recipe-show-instructions">
                             <div className="recipe-show-instructions-title">Instructions</div>
-                            <div className="recipe-show-instructions-list">{this.props.recipe.all[0].instructions}</div>
+                            <div className="recipe-show-instructions-list">{instrHTML}</div>
                         </div>
                         
 

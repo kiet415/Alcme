@@ -41,6 +41,7 @@
     "parse-svg-path": "^0.1.2",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-html-parser": "^2.0.2",
     "react-svg": "^14.0.9",
     "redux": "^4.1.1",
     "redux-logger": "^3.0.6",
