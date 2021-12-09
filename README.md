@@ -1,7 +1,6 @@
 # README
 <center><img src="frontend\public\ALcme.png"></center>
 
-<h3 style="text-align: center;">A lightweight calendar web app for organizing your life</h3>
 
 ## Table of contents
 + [About the App](#about-the-app)
